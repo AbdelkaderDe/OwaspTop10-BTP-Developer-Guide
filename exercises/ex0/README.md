@@ -6,9 +6,9 @@ In the excercises you will use a BTP subaccount wit a subaccount admin user, whi
 - Identity Provider they reside in is the Identity Authentication tenant akihlqzx8.accounts.ondemand.com
 
 Additionally you will make use of some test users to test the application you are working on.
-- bob.support@company.com (Support user).
-- alice.support@company.com (Support user).
-- david.admin@company.com (Admin user).
+- bob.support@company.com (Support user) (PWD: Acce$$teched25 )
+- alice.support@company.com (Support user) (PWD: Acce$$teched25 )
+- david.admin@company.com (Admin user) (PWD: Acce$$teched25 )
 
 - Configure User Roles in BTP cockpit
     - Assign bob.support and alice.support to role collection 'Incident Management Support' (TBD with screenshots).
