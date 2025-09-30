@@ -49,12 +49,11 @@ If it is running, click on secure_incident_management to open the SAP Business A
 
 Bookmark your SAP Business Application Studio link.
 
-In the Workspace on the right side in the SAP Business Application Studio you will find the incident-management application.
+Go back to the BTP cockpit. clikc on the Go to Application tile next to the SAP Build Work Zone, standard edition Application to open the Workzone application. 
 
+Check if the Secure Incident Management Application is present. Open it in a incognito window or a different browserand login with the alice.support user. Bookmark the application. 
 
-
-
-
+Now you are ready to start the excercises. 
 
 
 ## Summary
