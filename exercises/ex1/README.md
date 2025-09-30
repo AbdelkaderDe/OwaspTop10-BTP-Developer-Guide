@@ -25,6 +25,7 @@ CAP provides a multi-layered security approach:
     - Programmatic checks (in service handlers).
 
 There are two excercises related to this topic.
+
 Continue to [Exercise 1.1 - Horizontal Privilege Escalation](./ex1.1/README.md)
 
 and then  [Exercise 1.2 - Vertical Privilege Escalation](./ex1.2/README.md)
@@ -32,7 +33,7 @@ and then  [Exercise 1.2 - Vertical Privilege Escalation](./ex1.2/README.md)
 
 ## Summary
 
-You've now ...
+When you have finished the two excercises related to Broken Access Control
 
-Continue to - [Exercise 2 - Security Logging and Monitoring Failures](../ex2/README.md)
+continue to - [Exercise 2 - Security Logging and Monitoring Failures](../ex2/README.md)
 
