@@ -42,6 +42,9 @@ Now after these checks, you can open the Business Application Studio. Navigate t
 On the Logon Screen click on the IDP akihlqzx8.accounts.ondemand.com to login with SSO.
 You will see your DEV Space called incident_management. Make sure it is in a running state, if not start it.
 If it is running, click on incident_management to open the SAP Business Application Studio with your incident_management application.
+Bookmark your SAP Business Application Studio link.
+
+
 
 ## Summary
 
