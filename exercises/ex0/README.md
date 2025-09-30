@@ -1,5 +1,6 @@
 # Getting started
-In the excercises you will use a BTP subaccount wit a subaccount admin user, which is the same as platform and application user.
+In the excercises you will use a BTP subaccount with a subaccount admin user, which is the same as platform and application user.
+You can find the access information for your Subaccount on your desk and the link in the browser.
 
 - xp260-0XX@education.cloud.sap ( with XX depending on your seat from 01 - 40 )
 - PWD is always  Acce$$teched25
