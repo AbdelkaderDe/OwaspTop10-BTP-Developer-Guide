@@ -32,5 +32,5 @@ CAP provides a multi-layered security approach:
 
 You've now ...
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 2 - Security Logging and Monitoring Failures](../ex2/README.md)
 
