@@ -34,7 +34,7 @@ Select a user. On the right frame check the role collections assigned.
     - Check if bob.support and alice.support are assigned to role collection 'Incident Management Support' 
     - Check if david.admin is assigned to role collection 'Incident Management Admin'
  
-As we are using Cloud Foundry, check under Cloud Fondry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org memebership. 
+As we are using Cloud Foundry, check under Cloud Fondry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org membership. 
 
 Under Cloud Foundry > Spaces, verify the existience of your Space called xp260-0XX.
 
