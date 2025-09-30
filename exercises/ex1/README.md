@@ -24,8 +24,10 @@ CAP provides a multi-layered security approach:
     - Instance-based (@restrict annotations).
     - Programmatic checks (in service handlers).
 
-## [Exercise 1.1 - Horizontal Privilege Escalation](./ex1.1/README.md)
-## [Exercise 1.2 - Vertical Privilege Escalation](./ex1.2/README.md)
+There are two excercises related to this topic.
+Continue to [Exercise 1.1 - Horizontal Privilege Escalation](./ex1.1/README.md)
+
+and then  [Exercise 1.2 - Vertical Privilege Escalation](./ex1.2/README.md)
 
 
 ## Summary
