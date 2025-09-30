@@ -4,7 +4,7 @@ Vulnerability: A09:2021-Security Logging and Monitoring Failures
 
 ## 1. Overview
 
-In this exercise you will extend the local audit-logging setup from [Exercise 2.1](../ex2.1/README.md) into a production-grade SAP BTP environment. You will:
+In this exercise you will extend the local audit-logging setup from [Exercise 2.1 - Audit Logging for Sensitive Data Access](../ex2.1/README.md) into a production-grade SAP BTP environment. You will:
 
   * Deploy the Incident Management service to SAP BTP Cloud Foundry Runtime.
   * Bind the managed SAP Audit Log Service to your application.
@@ -13,7 +13,7 @@ In this exercise you will extend the local audit-logging setup from [Exercise 2.
 
 ## 2. Prerequisites
 
-* Completion of [Exercise 2.1](../ex2.1/README.md) (local audit‐logging)
+* Completion of [Exercise 2.1 - Audit Logging for Sensitive Data Access](../ex2.1/README.md) (local audit‐logging)
 * SAP BTP subaccount + Cloud Foundry space
 * XSUAA instance (with support/admin scopes)
 * mbt & Cloud Foundry CLI installed
