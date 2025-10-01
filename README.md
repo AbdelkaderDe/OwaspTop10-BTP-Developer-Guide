@@ -51,8 +51,7 @@ This structure is designed to help you understand a vulnerability from an attack
 - [Exercise 2 - Security Logging and Monitoring Failures](exercises/ex2/)
     - [Exercise 2.1 - Audit Logging for Sensitive Data Access](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Security Event Monitoring in SAP BTP Production Environment](exercises/ex2#exercise-22-sub-exercise-2-description)
-
-  
+- [Exercise 3 - SQL injection](exercises/ex3/README.md)
 
 
 
