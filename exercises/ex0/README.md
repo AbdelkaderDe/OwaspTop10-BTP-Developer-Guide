@@ -40,9 +40,10 @@ You will make use of some test users to test the application you are working on.
 - david.admin@company.com (Admin user)
 
 Check User Role Collections in the BTP cockpit for Bob, Alice and David.
+
 Select a user. On the right frame check the role collections assigned.
-    - Check if bob.support and alice.support are assigned to role collection 'Incident Management Support' 
-    - Check if david.admin is assigned to role collection 'Incident Management Admin'
+- Check if bob.support and alice.support are assigned to role collection 'Incident Management Support' 
+- Check if david.admin is assigned to role collection 'Incident Management Admin'
 
 ## Review the Development Environment
  
