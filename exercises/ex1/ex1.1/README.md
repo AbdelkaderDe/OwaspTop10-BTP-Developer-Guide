@@ -378,7 +378,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
   - ✅ This confirms that the where: 'assignedTo = $user' condition is effectively enforced — Alice cannot access Bob’s incident, even though both are support users.
   - 👉 This resolves the horizontal privilege escalation vulnerability.
  
-### Step 5: Verify Alice Cannot Modify or Delete a Closed Incident
+### Step 4: Verify Alice Cannot Modify or Delete a Closed Incident that is on Alice's name
 - Action:
   - Locate a closed incident (e.g., one with status "C").
   - Click "Edit" and make changes.
@@ -387,7 +387,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
   - ❌ For updates: The system blocks the edit with an error (e.g., "Cannot modify a closed incident" from services.js).
   - ❌ For deletions: The system prevents deletion with a similar error. This confirms the combined effect of @restrict and the onModify handler in services.js.
 
-### Step 6: Verify Alice Can Modify an Unassigned Incident
+### Step 5: Verify Alice Can Modify an Unassigned Incident
 - Action:
   - Locate an unassigned incident (e.g., one where "Assigned To" is null).
   - Click "Edit", make changes (e.g., update the title), and save.
