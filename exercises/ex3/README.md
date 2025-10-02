@@ -339,11 +339,20 @@ The remediation successfully addresses the SQL Injection vulnerability by:
 - **Leveraging Framework Security:** CAP’s built-in query translation to CQN (Core Query Language) and parameter binding prevent SQL injection at runtime.
 
 ## 📌 Summary
+
+### 🔑 Key Take‑aways (SAP CAP Recommendations)
+Whenever there’s user input involved:
+  1. Never use string concatenation when constructing queries!
+     String concatenation re‑introduces injection risk because user data becomes part of the raw SQL text.
+  2. Never surround tagged template strings with parentheses!
+      Parentheses force the template literal to be evaluated as a plain string before the tag processes it, bypassing parameter‑binding and opening the door to injection.
+
 In this exercise, you have learned how to:
 - **Identify SQL Injection Vulnerabilities:** Recognize unsafe patterns like direct string interpolation in queries.
 - **Implement Parameterized Queries:** Use CAP’s fluent API (SELECT.from().where()) to securely handle user input.
 - **Test Remediation:** Verify the fix via the HTTP endpoint by testing that valid inputs succeed and SQL injection attempts are blocked.
 - **Adopt Secure Coding Practices:** Prevent OWASP A03:2021–Injection risks by avoiding manual SQL string construction.
+
 
 👉 Next up: [Exercise 2 - Security Logging and Monitoring Failures](../../ex2/README.md), where we address critical [OWASP Top 10 2021 list (A09)](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) risks by implementing CAP's audit logging framework to detect unauthorized data access, track sensitive information flow, and ensure regulatory compliance through comprehensive security monitoring in enterprise environments.
 
