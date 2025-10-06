@@ -31,7 +31,7 @@ We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../ex1/ex1.2/R
 2. **Vulnerable Implementation (srv/services.js):** Raw SQL query with direct string insertion
 
 **Updated File:** srv/services.cds
-- The updated services.cds file now includes a new function called fetchCustomer in the AdminService.This function is intentionally designed to be vulnerable to SQL injection for demonstration purposes.
+- The updated services.cds file now includes a new function called fetchCustomer in the AdminService. This function is intentionally designed to be vulnerable to SQL injection for demonstration purposes.
 
 ```
 ... Other methods
