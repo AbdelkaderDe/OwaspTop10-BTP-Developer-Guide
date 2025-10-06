@@ -274,7 +274,7 @@ The remediation successfully addresses Vertical Privilege Escalation by:
 
   - Cannot close high-urgency incidents.
   - Cannot modify/delete closed incidents.
-  - Can modify only to their own incidents.
+  - Can modify only their own incidents.
 
 **2. Empowering Admin Users:**
   - Full access to all incidents and operations.
