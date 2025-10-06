@@ -113,7 +113,7 @@ class ProcessorService extends cds.ApplicationService {
 
 ### 📌Critical Vulnerability Summary
 - ❌ Support users can close high-urgency incidents.
-- ❌ Admins are excluded entirely from modifying closed incidents due to misconfigured @requires.
+- ❌ Admins are excluded entirely from accessing the app due to misconfigured @requires.
 - ❌ No validation in services.js for:
   - Admin role when closing high-urgency incidents.
   - Admin role when modifying closed incidents.
