@@ -273,7 +273,7 @@ annotate my.Incidents:conversation with @PersonalData {
 As part of audit logs, there can be cases where you want to genereate custom audit logs. For example if you want to log 403 - Forbidden events when an user is not having roles but is still trying to access certain data. This can be achieved by adding custom handlers in a CAP application.
 
 - Action :
-  - Create a server.js file at the root of your CAP application with the following content:
+  - Create a new file server.js underneath the project root (node "secure-incident-management-ex0") in the workspace explorer. Add the following content:
   ```
   const cds = require('@sap/cds')
 
