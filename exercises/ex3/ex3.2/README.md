@@ -24,16 +24,54 @@ In this exercise you will extend the local audit-logging setup from [Exercise 3.
 
 ### 1. Bind the Managed SAP Audit Log Service
 
-Your mta.yaml already includes the correct service definition. Confirm the following resource exists under the resources: section:
+- Action: 
+  - Open [mta.yaml](./mta.yaml) and scroll to the resources: section (no edit required).
+  - Confirm the following resource exists under the resources section
 
+```
 - name: incident-management-auditlog
   type: org.cloudfoundry.managed-service
   parameters:
     service: auditlog
     service-plan: standard
+```
+- Result: 
+  - No changes needed,  you’ll notice the new resource definition
 
-✅ No changes needed — this matches your provided mta.yaml.
-⚠️ Do not use cds add audit-logging — it modifies authentication modules and breaks your manual binding.
+### 2. Bind the service to the 'incident-management-srv' module
+- Action: In the same file, look at the incident-management-srv module under modules:
+
+```
+requires:
+      - name: incident-management-destination
+      - name: incident-management-db
+      - name: incident-management-auth
+      - name: incident-management-auditlog
+```
+
+
+- Result: The line - 'name: incidents-auditlog' is already present in the 'requires:' array, meaning the service is automatically bound at deploy time.
+
+- Your [mta.yaml](./mta.yaml) already contains the correct service and module definitions, so no further action is needed.
+
+### 3. Build the MTA
+- Action: Run the build command in the project root or from contect menu
+```
+  mbt build
+```
+Result: An MTAR archive is created under mta_archives/ (e.g., incident-management_1.0.0.mtar).
+
+### 4. Deploy the MTA
+
+- Action: 
+  - Locate the .mtar file in the mta_archives directory.
+  - Use the context menu 'Deploy MTA Archive' or Run the following command to deploy your application:
+```
+  cf deploy mta_archives/<mtar_name>.mtar 
+```
+Result: The CF CLI shows green checks for every module and resource, including automatic provisioning and binding of incidents-auditlog.
+
+
 
 
 
