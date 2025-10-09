@@ -152,7 +152,7 @@ entity Incidents : cuid, managed {
 }
 ... // Other entity
 ```
-Copy the contents of [schema.cds](./schema.cds) into your project’s db/schema.cds file.
+Copy the contents of [schema.cds](./db/schema.cds) into your project’s db/schema.cds file.
 
 ### Step 2: Update Test Data with Assignments
 
