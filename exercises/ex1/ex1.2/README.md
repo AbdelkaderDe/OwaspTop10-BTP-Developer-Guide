@@ -155,7 +155,7 @@ annotate ProcessorService with @(requires: ['support', 'admin']);  // ✅ NEW: A
 ...
 
 ```
-Copy the contents of [services.cds](./services.cds) into your project’s srv/services.cds file.
+Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
 
 Key Changes:
 
