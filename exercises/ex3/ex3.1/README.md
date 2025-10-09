@@ -504,4 +504,4 @@ In these exercise, you have learned how:
 * To generate comprehensive security event logs for unauthorized access attempts, enabling regulatory compliance with PCI-DSS and GDPR requirements.
 
 
-👉 Next up: [Exercise 3.2 - Security Event Monitoring in SAP BTP Production Environment](../ex2.2/README.md), where we take these audit logs beyond local testing and validate them in a production-grade enterprise environment.
+👉 Next up: [Exercise 3.2 - Security Event Monitoring in SAP BTP Production Environment](../ex3.2/README.md), where we take these audit logs beyond local testing and validate them in a production-grade enterprise environment.
