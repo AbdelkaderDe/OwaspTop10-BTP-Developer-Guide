@@ -21,7 +21,7 @@ By completing the exercises, you will gain the practical skills to identify and 
 
 -	**Identify and Mitigate** a critical OWASP Top 10 vulnerability in a real-world scenario.
 -	**Leverage**  the SAP Cloud Application Programming Model (CAP) for secure, cloud-native development.
--	**Implement** BTP's comprehensive, built-in security services to protect your data and business logic.
+-	**Implement** SAP BTP's comprehensive, built-in security services to protect your data and business logic.
 -	**Validate** the effectiveness of security fixes through practical testing.
 
 
