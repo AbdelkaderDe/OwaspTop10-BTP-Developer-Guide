@@ -2,7 +2,7 @@
 Vulnerability: [A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/)
 
 ## Table of Contents
-- [📖 1. Overview](./README.md#-1-overview)
+- [📖 1. Overview](./README.md#--1-overview-)
 - [🚨 2. Vulnerable Code](./README.md#-2-vulnerable-code)
 - [💥 3. Exploitation](./README.md#-3-exploitation)
 - [🛡️ 4. Remediation](./README.md#%EF%B8%8F-4-remediation)
