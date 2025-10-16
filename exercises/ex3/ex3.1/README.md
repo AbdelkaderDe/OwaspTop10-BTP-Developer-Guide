@@ -4,10 +4,10 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 ## Table of Contents
 - [📖  1. Overview](./README.md#--1-overview-)
 - [🚨 2. Vulnerable Code](./README.md#-2-vulnerable-code)
-- [💥 3. Exploitation](./README.md#--1-overview-)
-- [🛡️ 4. Remediation](./README.md#--1-overview-)
-- [✅ 5. Verification](./README.md#--1-overview-)
-- [📌 6. Summary](./README.md#--1-overview-)
+- [💥 3. Exploitation](./README.md#-3-exploitation)
+- [🛡️ 4. Remediation](./README.md#%EF%B8%8F-4-remediation)
+- [✅ 5. Verification](./README.md#-5-verification)
+- [📌 6. Summary](./README.md#-6-summary)
 
 ## 📖  1. Overview:
 
