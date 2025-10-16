@@ -67,9 +67,9 @@ annotate AdminService with @(requires: 'admin');
 - Any support user can UPDATE/DELETE any incident, regardless of assignment.
 
 
-## 💥 3. Exploitation: (TBD with screenshots)
+## 💥 3. Exploitation (TBD with screenshots)
 
-### Step 1: Login as Alice (Support User) :
+### Step 1: Login as Alice (Support User) 
 - Access SAP Build Work Zone.
 - Login with alice.support@company.com.
 - Navigate to Incident Management application.
@@ -96,7 +96,7 @@ annotate AdminService with @(requires: 'admin');
   - Click "Save".
 - Result:
   - ✅ The system prevents the update and displays an error (e.g., "403 Forbidden - Cannot modify a closed incident").
-  - 👉 This is due to the existing check in services.js, which blocks updates on closed incidents regardless of user role.
+  - 👉 This is due to the existing check in services.js, which blocks updates on closed incidents regardless of the user role.
   - ❌ However, this does not mitigate the core Horizontal Privilege Escalation issue, as Alice can still update non-closed incidents not assigned to her.
 
 ### Step 4: Exploit Deleting an Incident
@@ -120,7 +120,7 @@ annotate AdminService with @(requires: 'admin');
 * ❌ **Partial safeguards:** While updates to closed incidents are blocked, deletions remain unrestricted, amplifying risks.
 * ❌ **Security risks:** This enables widespread data tampering and deletion, directly aligning with OWASP Top 10 A01: Broken Access Control.
 
-## 🛡️ 4. Remediation:
+## 🛡️ 4. Remediation
 The fix requires both database schema changes and service-level security implementation.
 
 ### Step 1: Add Assignment Tracking to Database Schema
@@ -158,7 +158,7 @@ Copy the contents of [schema.cds](./db/schema.cds) into your project’s db/sche
 
 File: `db/data/sap.capire.incidents-Incidents.csv`
  *   Add the 'assignedTo' column and assign incidents to our test users.
- *   **Note:** Use the actual user IDs from your IdP. For this lab, we'll use their email addresses as a stand-in.
+ *   **Note:** Use the actual user IDs from your identity provider (IdP). For this workshop, we'll use their email addresses as a stand-in.
 
 ```
 ID,customer_ID,title,urgency_code,status_code,assignedTo
@@ -349,7 +349,7 @@ AssignedTo=Assigned To
 ```
 Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s /_i18n/i18n.properties file.
 
-## ✅ 5. Verification:
+## ✅ 5. Verification
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
 
 ### Step 1: Deploy the Updated Application to Cloud Foundry
@@ -403,7 +403,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
   - Click "Edit", make changes (e.g., update the title), and save.
 - Result: ✅ The system allows the modification, as per the remediated rule (where: 'assignedTo is null or assignedTo = $user'), demonstrating that unassigned incidents are accessible to support users.
 
-## 📌 Verification Summary :
+## 📌 Verification Summary
 The remediation is successful in combination of :
 - Adding the 'assignedTo' field in schema.cds.
 - Implementing @restrict with where: 'assignedTo = $user'.
