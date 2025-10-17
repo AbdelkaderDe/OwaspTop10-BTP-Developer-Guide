@@ -9,9 +9,9 @@ Vulnerability: [A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_
 - [✅ 5. Verification](./README.md#-5-verification)
 - [📌 6. Summary](./README.md#-6-summary)
 
-## 📖 1. Overview:
+## 📖 1. Overview
 
-After addressing in [Exercise 1.1 - Horizontal Privilege Escalation](../ex1.1/README.md), the next step is to tackle vertical privilege escalation, which occurs when a user gains access to higher-privileged functions they shouldn't have. 
+After addressing in [Exercise 1.1 - Horizontal Privilege Escalation](../ex1.1/README.md), the next step is to tackle Vertical Privilege Escalation, which occurs when a user gains access to higher-privileged functions they shouldn't have. 
 In our Incident Management system, this means a support user could perform actions that are reserved for administrators, such as closing high-urgency incidents, or modifying or deleting closed incidents. 
 This violates critical business rules and poses significant risks to the integrity and compliance of the system.
 
@@ -29,14 +29,14 @@ This violates critical business rules and poses significant risks to the integri
   - ✅ Can close all incidents, including high-urgency incidents.
   - ✅ Can modify or delete closed incidents.
 
-### 🎯 Key Learning Objectives :
+### 🎯 Key Learning Objectives
   - Identify vulnerabilities that allow support users to perform actions reserved for administrators
   - Remediate these vulnerabilities by enforcing strict access controls
   - Ensure only authorized users can perform sensitive operations
   - Reinforce business logic to mitigate security risks
 
-## 🚨 2. Vulnerable Code:
-we will use exactly the [remediated code from Exercise 1.1.](../ex1.1#%EF%B8%8F-4-remediation). It correctly prevents support users from touching other users’ incidents, but it does not yet enforce admin‑only rules (e.g. closing high‑urgency incidents, modifying closed incidents, deleting any incident).
+## 🚨 2. Vulnerable Code
+We will use exactly the [remediated code from Exercise 1.1.](../ex1.1#%EF%B8%8F-4-remediation). It correctly prevents support users from touching other users’ incidents, but it does not yet enforce admin‑only rules (e.g. closing high‑urgency incidents, modifying closed incidents, deleting any incident).
 
 **File**: `srv/services.cds`
 ```cds
@@ -44,7 +44,7 @@ using { sap.capire.incidents as my } from '../db/schema';
 
 service ProcessorService {
   @restrict: [
-    { grant: ['READ', 'CREATE'], to: 'support' },        // ✅ Support can view all incidents
+    { grant: ['READ', 'CREATE'], to: 'support' },        // ✅ Support users can view all incidents
     { grant: ['UPDATE', 'DELETE'],                       // ✅ UPDATE, DELETE granted to support users
       to: 'support',
       where: 'assignedTo is null or assignedTo = $user'  // ✅ Horizontal control (correct)
@@ -55,7 +55,7 @@ service ProcessorService {
     entity Customers as projection on my.Customers;     
 }
 
-annotate ProcessorService with @(requires: 'support');  // ❌ Only support role required, Admins excluded
+annotate ProcessorService with @(requires: 'support');  // ❌ Only support role required, admins excluded
 
 ```
 **File**: `srv/services.js`
@@ -69,8 +69,8 @@ class ProcessorService extends cds.ApplicationService {
 
 // ❌ VULNERABILITY:
 // No check for admin role and for high-urgency incidents when status is changed to 'closed'
-// No check that only admins can modify closed incidents.
-// No updates or deletes on closed incidents.
+// No check that only admins can modify closed incidents
+// No updates or deletes on closed incidents
   async onModify(req) {
     const result = await SELECT.one.from(req.subject)
       .columns('status_code')
@@ -95,21 +95,21 @@ class ProcessorService extends cds.ApplicationService {
   - ❌ No check for incident urgency when a support user tries to close an incident.
   - ❌ Admin privileges are not enforced at both service (ProcessorService) and CRUD operation level.
     
-## 💥 3. Exploitation:
+## 💥 3. Exploitation
 
-### Step 1: Login as Alice (Support User) :
+### Step 1: Login as Alice (Support User) 
 - Access SAP Build Work Zone.
 - Login with alice.support@company.com. This user is set up from the previous exercise.
-- Navigate to Incident Management application.
+- Navigate to the Incident Management application.
 
 ### Step 2: Exploit Closing High-Urgency Incident
 - Action: 
   - Find a high-urgency incident assigned to Alice (e.g., "Strange noise when switching off Inverter").
   - Click "Edit" → Change Status to "Closed".
-  - Add a conversation message: "Closing this high-urgency incident as support user"
-  - Click "Save"
+  - Add a conversation message: "Closing this high-urgency incident as support user".
+  - Click "Save".
 - Result:
-  - ❌ The system allows Alice to close High-Urgency incident, violating the business rule.
+  - ❌ The system allows Alice to close a high-urgency incident, violating the business rule.
 
 ### Step 3: Login as Admin User
 
@@ -128,7 +128,7 @@ class ProcessorService extends cds.ApplicationService {
   - Admin role when modifying closed incidents.
 - ❌ Silent errors for admins reduce transparency and hinder operations.
 
-## 🛡️ 4. Remediation:
+## 🛡️ 4. Remediation
 The fixes follow the principle of least privilege, ensuring support users are blocked from unauthorized actions while admins retain elevated permissions.
 
 ### Key Remediation Steps
@@ -138,8 +138,7 @@ The fixes follow the principle of least privilege, ensuring support users are bl
 * **Improve UI Error Handling:** Modify the frontend to display meaningful error messages for forbidden actions.
 
 ### Step 1: Update Services.cds
-The updated version for this exercise introduces vertical privilege escalation protections, explicitly defining admin privileges for Processorservice while maintaining the horizontal controls from [Exercise 1.1 - Horizontal Privilege Escalation]((../ex1.1/README.md))
-
+The updated version for this exercise introduces Vertical Privilege Escalation protections, explicitly defining admin privileges for ProcessorService while maintaining the horizontal controls from [Exercise 1.1 - Horizontal Privilege Escalation]((../ex1.1/README.md)).
 
 ```
 // Updated srv/services.cds
@@ -159,7 +158,7 @@ service ProcessorService {
 
 }
 
-annotate ProcessorService with @(requires: ['support', 'admin']);  // ✅ NEW: Allow both roles support and admin at service level.
+annotate ProcessorService with @(requires: ['support', 'admin']);  // ✅ NEW: Allow both roles, support and admin, at service level.
 
 ...
 
@@ -172,8 +171,8 @@ Key Changes:
 * ✅ Service-Level Role Requirements: @requires: ['support', 'admin'] allows both roles to access the service.
 
 ### Step 2: Update Services.js
-The initial remediation code from [Exercise 1.1]((../ex1.1/README.md)) secured against horizontal privilege escalation (support users interfering with others' incidents). 
-However, it still allowed support users to perform actions reserved for administrators, such as closing high-urgency incidents. We enhance the existing services.js to fix vertical privilege escalation.
+The initial remediation code from [Exercise 1.1]((../ex1.1/README.md)) secured against Horizontal Privilege Escalation (support users interfering with other support users' incidents). 
+However, it still allowed support users to perform actions reserved for administrators, such as closing high-urgency incidents. We enhance the existing services.js to fix Vertical Privilege Escalation.
 
 Here is the updated services.js with added checks to enforce the admin-only rules:
 
@@ -220,11 +219,11 @@ Key Changes:
 
 * ✅ Implements role-based access control using req.user.isAdmin().
 * ✅ Allows administrators to modify/delete closed incidents.
-* ✅ Returns 403 Forbidden with descriptive error message
+* ✅ Returns 403 Forbidden with descriptive error message.
 * ✅ Prevents support users from closing high-urgency incidents (urgency_code === 'H').
 * ✅ Allows administrators to close any incident, including high-urgency ones.
 
-## ✅ 5. Verification:
+## ✅ 5. Verification
 This section outlines the steps to confirm that the remediation for the Vertical Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that:
 
 * Support users cannot perform admin-only operations (e.g., closing high-urgency incidents, modifying/deleting closed incidents).
@@ -248,7 +247,7 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
 - Result:
   - ❌ The system blocks the action.
   - ❌ The UI displays an error: "Only administrators can close high-urgency incidents."
-  - ✅ This confirms that vertical privilege escalation is prevented for high-urgency incidents.
+  - ✅ This confirms that Vertical Privilege Escalation is prevented for high-urgency incidents.
 
 ### Step 3: Verify Alice Can Modify Non-High-Urgency Incidents
 - Action:
@@ -260,7 +259,7 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
  
 ### Step 4: Login as David (Admin User)
   - Action:
-    - Log in with david.admin@company.com
+    - Log in with david.admin@company.com.
     - Locate a high-urgency open incident (assigned to anyone or unassigned).
     - Click "Edit", change status to "Closed", and save.
 - Result:
@@ -277,7 +276,7 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
 
 ### 📌 Verification Summary
 
-The remediation successfully addresses Vertical Privilege Escalation by:
+The remediation successfully addresses Vertical Privilege Escalation by
 
 **1. Restricting Support Users:**
 
@@ -294,9 +293,9 @@ The remediation successfully addresses Vertical Privilege Escalation by:
   - Imperative Security: services.js handlers (e.g., onModify) validate business rules.
   - Defense in Depth: Combined CDS annotations and JavaScript logic prevent bypasses.
 
-## 📌 6. Summary:
+## 📌 6. Summary
 
-In these exercises, you have learned how to:
+In these exercises, you have learned how to
   - Mitigate Vertical Privilege Escalation by explicitly defining admin-only operations in @restrict rules.
   - Leverage CAP’s Role-Based Access Control (RBAC) to separate support and admin tasks.
   - Combine Declarative and Imperative Security for comprehensive protection:
