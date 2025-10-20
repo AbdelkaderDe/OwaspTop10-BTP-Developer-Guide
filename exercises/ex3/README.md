@@ -25,6 +25,6 @@ Security Logging and Monitoring Failures is a critical web application security 
 
 There are two excercises related to this topic.
 
-Continue to [Exercise 3.1 - Audit Logging for Sensitive Data Access ](./ex3.1/README.md)
+Continue to [Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Developement](./ex3.1/README.md)
 
 and then [Exercise 3.2 - Security Event Monitoring in SAP BTP Production Environment](./ex3.2/README.md)
