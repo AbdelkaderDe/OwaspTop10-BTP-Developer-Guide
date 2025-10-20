@@ -177,9 +177,14 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   - Locate the log entry corresponding to the support user (e.g., alice.support@company.com).
 
 - **Result:**
-  - You will notice that the specific field values and modifications **(customer, title, urgency, status, message) are NOT displayed in the audit log.**
-  - This reveals the vulnerability: **Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes** see screenshot:
- 
+  - **You will notice that the specific field values and modifications** (customer, title, urgency, status, message) are **NOT displayed in the audit log.**
+  - **This reveals the vulnerability:** Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes see screenshot:
+
+    <p align="center">
+    <img src="images/audit-log-application-no-personal-annotation.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
  
 
 
