@@ -136,7 +136,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 - **Action: Confirm the Application’s Deployment Status**
    - Log in to your SAP BTP Cockpit and navigate to your subaccount, then open Spaces > Your Space> Applications
 
-  - **Result: Ensure that your application is listed as Started.** see screenshot:
+- **Result:** Ensure that your application is listed as **Started.** see screenshot:
 
   <p align="center">
     <img src="images/incident-management-application.png" alt="" width="900"/>
