@@ -81,6 +81,8 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 1. Integrate Audit Logging Feature to CAP Application
 
+⚠️ Note: Ensure ['@cap-js/audit-logging*]([../ex3.1/README.md#step-1-add-audit-logging-dependency]) is Installed.
+
 - **Action:** Execute the following command in your terminal
     ```
       cds add audit-logging --plan standard
@@ -185,89 +187,14 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     <br>
     <b></b>
   </p>
- 
+
+## 🛡️ 4. Remediation
+To address the identified vulnerability of insufficient logging for sensitive incident data, this section implements SAP CAP's built-in security controls through:
+  - **Personal Data Annotation** – Explicitly tags sensitive fields in incident records for GDPR compliance.
+  - **Automated Audit Logging** – Tracks all access and modifications to protected data with @cap-js/audit-logging.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- **Modify a record using  the Application UI:**
-  - Action: 
-  - Open the application's UI URL (found in the SAP BTP Cockpit under the application's details or routes).
-
-
-
-* Log in to the application using your credentials (ensure you have the necessary roles; test with different user roles if applicable to simulate permissions).
-
-
-* Navigate to the incidents section and select an existing incident record.
-
-* Make modifications to the record, such as updating fields like status, description, or other editable attributes.
-
-* Save the changes and note any system responses (e.g., success messages or errors).
-
-
-Result:
-
-* The modification should succeed if permitted by your user role and application rules, updating the incident record in the UI. However, due to the missing @PersonalData annotations on the Incidents entity, related audit logging may be incomplete (e.g., no entries for personal data changes). If the modification is forbidden (e.g., attempting to edit restricted fields), the system should prevent it with an error. (See screenshot below for an example of a successful modification.)
-
-
-  
-  - Action:
-  - Log in to the application UI and modify an incident record.
-
-
-* Result:
-Verify that the audit logs show incomplete logging due to the missing @PersonalData annotations on the Incidents entity.
-(Screenshot: Audit log entries from the UI or a relevant log view)
-
-Verify the Audit Log Service Binding:
-
-* Action:
-Within your space, locate the audit log service binding (e.g., space-application-incidetn-management-srv-service).
-* Result:
-Check that the binding details (service name, service plan, instance GUID, etc.) are correctly configured.
-(Screenshot: Details of the audit log service binding)
-
-
-
-Test the Application UI and Audit Logging:
-
-* Action:
-Log in to the application UI and modify an incident record.
-* Result:
-Verify that the audit logs show incomplete logging due to the missing @PersonalData annotations on the Incidents entity.
-(Screenshot: Audit log entries from the UI or a relevant log view)
-
-- Action : 
-  - Confirm the application's deployment status in the SAP BTP Cockpit to ensure it's running as expected.
-  -Goto 
 
