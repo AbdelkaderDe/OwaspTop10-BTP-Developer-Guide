@@ -18,8 +18,8 @@ In this exercise you will extend the local audit-logging setup from [Exercise 3.
 ### 🎯 Key Learning Objectives
 
   * Bind the managed SAP Audit Log Service to your Incident Management application.
-  * Deploy the incident management application  on the SAP BTP Cloud Foundry runtime and configure the managed Audit Log Service.
-  * Generate and validate audit events triggered by authenticated OData requests to sensitive data endpoints.
+  * Build and Deploy the incident management application  on the SAP BTP Cloud Foundry runtime.
+  * Design and implement comprehensive audit logging eventd that tracks and validates authenticated access to sensitive data endpoints.
   * Use the SAP Audit Log Viewer to access, filter, and analyze audit trails with full context (user, timestamp, action, resource)
 
 ## 📋 Prerequisites
