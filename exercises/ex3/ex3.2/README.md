@@ -267,7 +267,7 @@ annotate my.Incidents.conversation with @PersonalData : {
 ## ✅ 5. Verification
 In this section, you will verify that the remediation has successfully resolved the  [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) vulnerability. This verification is organized into two key areas:
  - Verify that authorized modifications to sensitive data are correctly logged with full detail, capturing the context of the change.
- - Verify unauthorized access Attempts are blocked and logged as Security Events.
+ - Verify unauthorized access attempts are blocked and logged as **Security Events**.
  
  #### 🪜 Step 1. Rebuild and Deploy the Remediated Application
 
