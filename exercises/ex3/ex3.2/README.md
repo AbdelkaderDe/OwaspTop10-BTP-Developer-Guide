@@ -170,18 +170,40 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
 
 **Action: Create a Role Collection for Audit Log Viewer Access**
-
-1. Log in to the SAP BTP Cockpit with your assigned user 'XP260-0xx@education.cloud.sap' and navigate to your subaccount.
-2. Go to Security > Role Collections.
-3. Click the Create button.
-4. Enter the following details:
- - Role Collection Name: auditlog-viewer
- - Description: Access to Audit Log Viewer (optional)
-5. Click Create.
+  - Log in to the SAP BTP Cockpit with your assigned user 'XP260-0xx@education.cloud.sap' and navigate to your subaccount.
+  - Go to Security > Role Collections.
+  - Click the Create button.
+  - Enter the following details:
+    - Role Collection Name: auditlog-viewer
+    - Description: Access to Audit Log Viewer (optional)
+  - Click Create.
 
 - **Result: A new role collection named auditlog-viewer is created.**
 
-#### 🪜 Step 5. Use the SAP Audit Log Viewer to Verify Insufficient Logging
+
+**Action: Add Roles to the Role Collection**
+  - In the Role Collections list, locate and click on the auditlog-viewer role collection you just created.
+  - Click the Edit button.
+  - Add the following role:
+   - Role Name : 'AuditLogViewer'
+   - Role Description :  'Read access to audit logs'
+  - Click Save.
+
+- **Result: The required roles are added to the auditlog-viewer role collection.**
+
+**Action: Assign the Role Collection to Your User**
+  - Navigate to Security > Users in your subaccount.
+  - Click on your user email (e.g., XP260-0xx@education.cloud.sap).
+  - Under Role Collections, click Assign Role Collection.
+  - Select auditlog-viewer from the dropdown list.
+  - Click Assign.
+
+Result: ✅ The auditlog-viewer role collection is now assigned to your user account, enabling you to access the SAP Audit Log Viewer service.
+
+
+
+
+#### 🪜 Step 6. Use the SAP Audit Log Viewer to Verify Insufficient Logging
 
 - **Action:**
   - Log in to the SAP BTP cockpit with your subaccount user XP260-0xx@education.cloud.sap" and navigate to the SAP Audit Log Viewer.
