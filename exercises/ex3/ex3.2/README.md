@@ -69,13 +69,10 @@ annotate my.Addresses with @PersonalData : {
 In this section, you will demonstrate the exploitation of the vulnerability through the following steps:
 
  - Integrate the audit logging feature into your CAP (Cloud Application Programming) application.
- 
  - Build and Deploy the application in its Current Vulnerable State to SAP BTP Cloud Foundry environment.
- 
  - Verify the deployment to confirm the application is operational and ready for demonstrating the exploitation of the vulnerability in subsequent steps.
- 
  - Simulate a Support User Accessing and Updating Sensitive Incident Data.
- 
+ - Configure audit log viewer access permissions for your user. 
  - Use the SAP Audit Log Viewer to Verify Insufficient Logging.
 
 
