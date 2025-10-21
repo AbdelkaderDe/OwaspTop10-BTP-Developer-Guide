@@ -295,6 +295,7 @@ In this section, you will verify that the remediation has successfully resolved 
 
 - ✅**Result: The incident record is successfully updated without any access denial errors.**
 
+
 - ▶️ **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
    - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
    - Login with your user (e.g., XP260-0xx@education.cloud.sap)
