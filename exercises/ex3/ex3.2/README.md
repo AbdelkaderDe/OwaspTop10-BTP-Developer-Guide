@@ -260,8 +260,8 @@ annotate my.Incidents.conversation with @PersonalData : {
 ✅ **Result:**
 - The data privacy annotations for the Incidents entity and its conversation element have been successfully configured. This enables the following security and compliance capabilities:
   - **Incident Entity Protection:**
-     - ✅ **Entity Classification:** The Incidents entity is marked as DataSubjectDetails, establishing that incident records contain information related to data subjects (customers).
-     - ✅ **Customer Linkage:** The customer field is explicitly classified as DataSubjectID, creating a clear audit trail, linking each incident to its associated data subject.
+     - ✅ **Entity Classification:** The Incidents entity is marked as **DataSubjectDetails**, establishing that incident records contain information related to data subjects (customers).
+     - ✅ **Customer Linkage:** The customer field is explicitly classified as **DataSubjectID**, creating a clear audit trail, linking each incident to its associated data subject.
      - ✅ **Field-Level Sensitivity Classification:** The fields title, urgency, status, and assignedTo are marked as **IsPotentiallyPersonal**, triggering automatic audit logging for any access or modification to these fields.
 
   - **Conversation Message Protection:**
