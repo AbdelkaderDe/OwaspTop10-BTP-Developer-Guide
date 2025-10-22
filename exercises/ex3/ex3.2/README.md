@@ -77,7 +77,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 1. Integrate Audit Logging Feature into CAP Application
 
-⚠️ Note: Ensure **[@cap-js/audit-logging](../ex3.1/README.md#step-1-add-audit-logging-dependency)** is Installed.
+- ⚠️ Note: Ensure **[@cap-js/audit-logging](../ex3.1/README.md#step-1-add-audit-logging-dependency)** is Installed.
 
 - ▶️ **Action:** Execute the following command in your terminal
     ```
@@ -103,7 +103,6 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - ✅ **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
   
-
 #### 🪜 Step 2. Build and deploy the CAP appplication
 
 ⚠️ Note: Ensure you're logged in to your Cloud Foundry space via the cf CLI or UI before deploying. Run the following command if needed: 
