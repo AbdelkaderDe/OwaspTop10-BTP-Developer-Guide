@@ -376,6 +376,9 @@ In this section, you will verify that the remediation has successfully resolved 
   - Attempt to select and modify an incident that is NOT assigned to you (bob.support@company.com).
   
 - ✅ **Result:** The modification is blocked with a 403 Forbidden error, and the incident remains unchanged.
+  - Here is a sample audit log showing the **SecurityEvent** for the unauthorized modification attempt:
+
+  
 
 
 
