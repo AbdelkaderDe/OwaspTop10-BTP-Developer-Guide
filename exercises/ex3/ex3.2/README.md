@@ -142,11 +142,11 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 - ▶️ **Action: Verify the Audit Log Service Binding**
    - Open the Application **incident-management-srv** > **Service Bindings** section.
    - Confirm that the following service binding is present:
-     * Service Binding Name: incident-management-auditlog
-     * Service: auditlog
-     * Plan: standard
+     * Service Binding Name: **incident-management-auditlog**
+     * Service: **auditlog**
+     * Plan: **standard**
 
-- **Result: The audit log service binding is confirmed as active and correctly configured**, along with other required services. see screenshot:
+- ✅ **Result: The audit log service binding is confirmed as active and correctly configured**, along with other required services. see screenshot:
 
   <p align="center">
     <img src="images/audit-log-application-binding.png" alt="" width="900"/>
