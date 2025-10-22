@@ -1,4 +1,4 @@
-# Exercise 2 - SQL injection
+# Exercise 2 - SQL Injection
 Vulnerability: [A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/)
 
 ## Table of Contents
@@ -9,13 +9,13 @@ Vulnerability: [A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/)
 - [✅ 5. Verification](./README.md#-5-verification)
 - [📌 6. Summary](./README.md#-6-summary)
 
-## 📖  1. Overview :
+## 📖  1. Overview
 
-This exercise demonstrates how unsanitized user inputs can be exploited to perform SQL Injection attacks, thereby compromising the integrity and confidentiality of enterprise data. In the Incident Management system, input fields—such as those accepting the customer ID, are vulnerable if not properly validated. As a result, attackers might inject malicious SQL code to retrieve, alter, or delete sensitive records without detection.
+This exercise demonstrates how unsanitized user inputs can be exploited to perform SQL Injection attacks, thereby compromising the integrity and confidentiality of enterprise data. In the Incident Management system, input fields - such as those accepting the customer ID - are vulnerable if not properly validated. As a result, attackers might inject malicious SQL code to retrieve, alter, or delete sensitive records without detection.
 
 ### 📐Business Rules
 
-  - ❌ Users Must not exploit insecure input fields to inject or modify SQL queries.
+  - ❌ Users must not exploit insecure input fields to inject or modify SQL queries.
   - ⚠️ All user inputs must be rigorously validated and sanitized to prevent SQL Injection.
 
 ### ⚠️ Why This Matters
@@ -30,7 +30,7 @@ This exercise demonstrates how unsanitized user inputs can be exploited to perfo
 - Learn to use CAP’s safe query APIs (parameterized queries) to prevent SQL Injection.
 - Test the remediation to confirm that malicious inputs are neutralized while legitimate application functionality remains intact.
 
-## 🚨 2. Vulnerable Code:
+## 🚨 2. Vulnerable Code
 We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../ex1/ex1.2/README.md)  by introducing an SQL Injection vulnerability resulting from unsanitized user input.
 
 ### What We're Adding
@@ -39,7 +39,7 @@ We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../ex1/ex1.2/R
 2. **Vulnerable Implementation (srv/services.js):** Raw SQL query with direct string insertion
 
 **Updated File:** srv/services.cds
-- The updated services.cds file now includes a new function called fetchCustomer in the AdminService. This function is intentionally designed to be vulnerable to SQL injection for demonstration purposes.
+- The updated services.cds file now includes a new function called fetchCustomer in the AdminService. This function is intentionally designed to be vulnerable to SQL Injection for demonstration purposes.
 
 ```
 ... Other methods
@@ -99,10 +99,10 @@ Copy the contents of [services_vulnerable.js](./srv/services_vulnerable.js) into
 - ❌ **No Input Validation:** The user-supplied customerID is concatenated directly into the SQL query without validation, making it possible for an attacker to inject malicious SQL code.
 - ❌ **Lack of Parameterized Queries:** The raw SQL query does not use parameter binding or prepared statements, leaving the query structure exposed to manipulation.
 
-## 💥 3. Exploitation:
+## 💥 3. Exploitation
 
-### Step 1: Create a Test File for HTTP Endpoint:
-- Action :
+### Step 1: Create a Test File for HTTP Endpoint
+- Action:
   - Navigate to the `test/http` directory in your CAP project folder.
   - Click on "Add New File" and name it "sql-injection-demo.http".
   - Copy the contents of [sql-injection-demo.http](./test/sql-injection-demo.http) into your project’s test/http/sql-injection-demo.http file:
@@ -143,8 +143,8 @@ Authorization: Basic {{username}}:{{password}}
   - The test/http/sql-injection-demo.http file is now created and ready for testing.
   - This file contains three HTTP requests:
     - Test 1: A legitimate request to retrieve a specific customer.
-    - Test 2: A malicious request that demonstrates a SQL injection vulnerability.
-    - Test 3: A SQL injection using multiple SQL statements.
+    - Test 2: A malicious request that demonstrates a SQL Injection vulnerability.
+    - Test 3: A SQL Injection using multiple SQL statements.
 
 ### Step 2: Exploit the SQL Injection Vulnerability
 
@@ -232,11 +232,11 @@ Authorization: Basic {{username}}:{{password}}
 - ❌ **Insecure SQL Concatenation:** The services.js code uses direct string concatenation ('${customerID}') to build an SQL query instead of using parameterized queries.
 - ❌ **Lack of Input Sanitization:** No validation or sanitization is performed on the customerID input parameter before it is used in the SQL query.
 
-## 🛡️ 4. Remediation:
+## 🛡️ 4. Remediation
 - This section outlines the steps required to fix the SQL Injection vulnerability identified in the fetchCustomer function.
 
 ### Step 1: Update the Vulnerable Code in srv/services.js
-- The updated services.js now includes a secure version of the fetchCustomer function. It replaces the vulnerable SQL string concatenation with CAP’s built-in parameterized query API (SELECT.from), which automatically sanitizes inputs and prevents SQL injection.
+- The updated services.js now includes a secure version of the fetchCustomer function. It replaces the vulnerable SQL string concatenation with CAP’s built-in parameterized query API (SELECT.from), which automatically sanitizes inputs and prevents SQL Injection.
 
 ```
 // ✅ SECURE: Parameterized query using CAP’s fluent API
@@ -256,12 +256,12 @@ Copy the contents of [services.js](./srv/services.js) into your project’s srv/
 ### Key Changes:
   - ✅ Replaced raw SQL string concatenation with CAP’s SELECT.from().where() syntax.
   - ✅ Input is automatically parameterized and sanitized by the framework.
-  - ✅ Eliminates the risk of SQL injection.
+  - ✅ Eliminates the risk of SQL Injection.
 
-## ✅ 5. Verification:
+## ✅ 5. Verification
 This section outlines the steps to confirm that the remediation for the SQL Injection vulnerability has been successfully implemented. The goal is to verify that:
 
-- Malicious SQL injection payloads are neutralized and no longer return unauthorized data.
+- Malicious SQL Injection payloads are neutralized and no longer return unauthorized data.
 - Legitimate requests continue to function correctly and return expected results.
 - The application now correctly uses parameterized queries, preventing any manipulation of the query structure.
 
@@ -320,7 +320,7 @@ Authorization: Basic incident.support@tester.sap.com:initial
 ```
 - ✅ Empty array [] returned.
 - ✅ The malicious payload ' OR '1'='1 is treated as a literal string value rather than executable SQL.
-- ✅ This confirms that the SQL injection vulnerability has been successfully mitigated.
+- ✅ This confirms that the SQL Injection vulnerability has been successfully mitigated.
 
 ### Step 3: Test Additional Malicious Payloads (Optional)
 - Action:
@@ -347,20 +347,20 @@ The remediation successfully addresses the SQL Injection vulnerability by:
 - **Eliminating String Concatenation:** Replaced unsafe SQL string building with CAP’s parameterized query API (SELECT.from().where({...})).
 - **Neutralizing Malicious Inputs:** Attack payloads (e.g., ' OR '1'='1) are treated as data values, not executable code.
 - **Preserving Legitimate Functionality:** Valid requests continue to work as expected without disruption.
-- **Leveraging Framework Security:** CAP’s built-in query translation to CQN (Core Query Language) and parameter binding prevent SQL injection at runtime.
+- **Leveraging Framework Security:** CAP’s built-in query translation to CQN (Core Query Language) and parameter binding prevent SQL Injection at runtime.
 
-## 📌 6. Summary:
+## 📌 6. Summary
 
-### 🔑 Key Take‑aways (SAP CAP Recommendations)
+### 🔑 Key Take‑Aways (SAP CAP Recommendations)
 Whenever there’s user input involved:
-  1. **Never use string concatenation when constructing queries! :** Use parameterized APIs (e.g., CAP’s SELECT.from().where()) to ensure user input is treated as data, not executable code.
-  2. **Never surround tagged template strings with parentheses! :** The parentheses (${userInput}) force JavaScript to evaluate the template literal as a raw string before it reaches the SQL parser. The malicious input becomes part of the SQL command: WHERE id = (1; DROP TABLE users--).
+  1. **Never use string concatenation when constructing queries!** Use parameterized APIs (e.g., CAP’s SELECT.from().where()) to ensure user input is treated as data, not executable code.
+  2. **Never surround tagged template strings with parentheses!** The parentheses (${userInput}) force JavaScript to evaluate the template literal as a raw string before it reaches the SQL parser. The malicious input becomes part of the SQL command: WHERE id = (1; DROP TABLE users--).
 
 In this exercise, you have learned how to:
 - **Identify SQL Injection Vulnerabilities:** Recognize unsafe patterns like direct string interpolation in queries.
 - **Implement Parameterized Queries:** Use CAP’s fluent API (SELECT.from().where()) to securely handle user input.
-- **Test Remediation:** Verify the fix via the HTTP endpoint by testing that valid inputs succeed and SQL injection attempts are blocked.
-- **Adopt Secure Coding Practices:** Prevent OWASP A03:2021–Injection risks by avoiding manual SQL string construction.
+- **Test Remediation:** Verify the fix via the HTTP endpoint by testing that valid inputs succeed and SQL Injection attempts are blocked.
+- **Adopt Secure Coding Practices:** Prevent OWASP A03:2021-Injection risks by avoiding manual SQL string construction.
 
 
 👉 Next up: [Exercise 3 - Security Logging and Monitoring Failures](../ex3/README.md), where we address critical [OWASP Top 10 2021 list (A09)](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) risks by implementing CAP's audit logging framework to detect unauthorized data access, track sensitive information flow, and ensure regulatory compliance through comprehensive security monitoring in enterprise environments.
