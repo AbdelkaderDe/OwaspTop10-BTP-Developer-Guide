@@ -105,11 +105,8 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   
 #### 🪜 Step 2. Build and deploy the CAP appplication
 
-⚠️ Note: Ensure you're logged in to your Cloud Foundry space via the cf CLI or UI before deploying. Run the following command if needed: 
-
- ```
-  cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform      
- ```
+- ⚠️ Note: Ensure you're logged in to your Cloud Foundry space via the **cf CLI** command or **Business application file explorer UI** before deploying.
+  
 - ▶️ **Action: Build the MTA**
   - Open a terminal and navigate to the project root directory.
   - Run the following command to build the MTA, Alternatively, if using an IDE like SAP Business Application Studio: Right-click on the [mta.yaml](./mta.yaml) file in the file explorer. Select the option **Build MTA Project**.
