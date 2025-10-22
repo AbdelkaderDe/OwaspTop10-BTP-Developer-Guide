@@ -154,6 +154,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     <b></b>
   </p>
 
+
 #### 🪜 Step 4. Simulate a Support User Accessing and Updating Sensitive Incident Data
 
 - ▶️ **Action: Modify a record using the Application UI:**
@@ -163,8 +164,10 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - ✅ **Result: The incident record is successfully updated**, and the UI reflects the changes.
 
+
 #### 🪜 Step 5. Configure Audit Log Viewer Access Permissions
-⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
+
+- ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
 - ▶️ **Action: Create a Role Collection for Audit Log Viewer Access**
   - Log in to the SAP BTP Cockpit with your assigned user **XP260-0xx@education.cloud.sap (Business User)** and navigate to your subaccount.
   - Go to Security > Role Collections.
@@ -196,6 +199,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     <b></b>
   </p>
 
+
 #### 🪜 Step 6. Use the SAP Audit Log Viewer to Verify Insufficient Logging
 
 - ▶️ **Action:**
@@ -214,6 +218,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     <br>
     <b></b>
   </p>
+
 
 ## 🛡️ 4. Remediation
 To address the identified vulnerability of insufficient logging for sensitive incident data, this section implements SAP CAP's built-in security controls through:
