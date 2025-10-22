@@ -166,31 +166,32 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 #### 🪜 Step 5. Configure Audit Log Viewer Access Permissions
 ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
 - ▶️ **Action: Create a Role Collection for Audit Log Viewer Access**
-  - Log in to the SAP BTP Cockpit with your assigned user **XP260-0xx@education.cloud.sap (Business user)** and navigate to your subaccount.
+  - Log in to the SAP BTP Cockpit with your assigned user **XP260-0xx@education.cloud.sap (Business User)** and navigate to your subaccount.
   - Go to Security > Role Collections.
   - Click the Create button.
   - Enter the following details:
-    - Role Collection Name: auditlog-viewer
-    - Description: Access to Audit Log Viewer (optional)
+    - Role Collection Name: **auditlog-viewer**
+    - Description: **Access to Audit Log Viewer** (optional)
   - Click Create.
 
 - ✅ **Result: A new role collection named auditlog-viewer is created.**
 
 - ▶️ **Action: Add Roles to the Role Collection**
-  - In the Role Collections list, locate and click on the auditlog-viewer role collection you just created.
-  - Click the Edit button.
-  - Add the following role:
+  1- In the Role Collections list, locate and click on the **auditlog-viewer role collection** you just created.
+  2- Click the **Edit** button.
+  3- In the **Roles** sections, add the following roles:
     - Role Name : **auditlog-viewer**
     - Role Description :  **View audit logs**
     - Role Name : **auditlog-management**
     - Role Description :  **Read access to audit logs**
-  - Click Save.
+  4- In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User
+  5- Click Save.
 
 - ✅ **Result: The required roles are added to the auditlog-viewer role collection.**
 
 - ▶️ **Action: Assign the Role Collection to Your User**
   - Navigate to Security > Users in your subaccount.
-  - Click on your user email (e.g., XP260-0xx@education.cloud.sap).
+  - Click on your user email (e.g., XP260-0xx@education.cloud.sap) Business User.
   - Under Role Collections, click Assign Role Collection.
   - Select auditlog-viewer from the dropdown list.
   - Click Assign.
