@@ -412,9 +412,9 @@ In this section, you will verify that the remediation has successfully resolved 
 
 - In this exercise, you have accomplished:
 1. **Local Development Validation** (Exercise 3.1)
-  - Verified audit logging functionality in development environment
-  - Tested sensitive data read operations and event capture
-  - Validated role-based access controls
+   - Verified audit logging functionality in development environment
+   - Tested sensitive data read operations and event capture
+   - Validated role-based access controls
 
 2. **Production Deployment & Validation** (Exercise 3.2)
    - Deployed remediated application to SAP BTP Cloud Foundry.
