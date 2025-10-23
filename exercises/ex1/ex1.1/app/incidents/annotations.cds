@@ -9,16 +9,16 @@ annotate service.Incidents with @(
                 $Type : 'UI.DataField',
                 Value : title,
             },
-            {
-                $Type : 'UI.DataField',
-                Label : '{i18n>Customer}',
-                Value : customer_ID,
-            },
             // ✅ ADDED: Use consistent i18n label for assigned user in general info
             {
                 $Type : 'UI.DataField',
                 Label : '{i18n>AssignedTo}',
                 Value : assignedTo,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : '{i18n>Customer}',
+                Value : customer_ID,
             },
         ],
     },
@@ -60,17 +60,7 @@ annotate service.Incidents with @(
                 Width : 'auto', // Set to auto to allow dynamic resizing
             }
         },
-        {
-            $Type : 'UI.DataField',
-            Value : customer.name,
-            Label : '{i18n>Customer}',
-            UI.LineItem : {
-                $Type : 'UI.LineItemType',
-                Width : 'auto',
-            }
-        },
-
-            // ✅ ADDED: Show assigned user in the list view
+        // ✅ ADDED: Show assigned user in the list view
         {
             $Type : 'UI.DataField',
             Value : assignedTo,
@@ -100,8 +90,17 @@ annotate service.Incidents with @(
                 Width : 'auto',
             }
         },
-
+        {
+            $Type : 'UI.DataField',
+            Value : customer.name,
+            Label : '{i18n>Customer}',
+            UI.LineItem : {
+                $Type : 'UI.LineItemType',
+                Width : 'auto',
+            }
+        },
     ],
+    
     // Added PresentationVariant to explicitly control column order and visibility in the table
     UI.PresentationVariant: {
         $Type: 'UI.PresentationVariantType',
@@ -113,10 +112,10 @@ annotate service.Incidents with @(
                     $Type: 'UI.Table',
                     ColumnOrder: [
                         { Value: title },
-                        { Value: customer.name },
-                        { Value: assignedTo }, // Make sure 'assignedTo' is included here
+                        { Value: assignedTo },
                         { Value: urgency.descr },
-                        { Value: status.descr }
+                        { Value: status.descr },
+                        { Value: customer.name }
                     ],
                     // 🔄 NEW: Added UI annotations for dynamic resizing
                     UI.TableSettings : {
