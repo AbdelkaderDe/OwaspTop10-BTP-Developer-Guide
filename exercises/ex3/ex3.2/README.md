@@ -408,10 +408,28 @@ In this section, you will verify that the remediation has successfully resolved 
     - The timestamp and IP address of the request
     - The event category (audit.security-events), confirming the attempt was logged as a security event.
 
+## 📌 6. Summary:
 
+- In this exercise, you have accomplished:
+1. **Local Development Validation** (Exercise 3.1)
+  - Verified audit logging functionality in development environment
+  - Tested sensitive data read operations and event capture
+  - Validated role-based access controls
 
-    
-  
+2. **Production Deployment & Validation** (Exercise 3.2)
+   - Deployed remediated application to SAP BTP Cloud Foundry.
+   - Simulated authorized data modifications and verified comprehensive logging
+   - Attempted unauthorized access and confirmed security event capture
+   - Accessed and analyzed audit logs via SAP Audit Log Viewer
 
+**🎓 Key Takeaways:**
 
+- **Comprehensive logging is essential** – Without proper audit trails, unauthorized access and data modifications go undetected
+- **Role-based access control + audit logging** – The combination prevents unauthorized access while providing forensic evidence
+- **Production-grade monitoring** – SAP Audit Log Viewer enables real-time visibility into security events and regulatory compliance
+- **Complete context matters** – Audit logs must capture user, timestamp, resource, action, and data changes for effective investigation
+
+**Congratulations!** 🎉 
+
+You have successfully remediated the **[A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)** vulnerability and transformed your application into an **enterprise-grade, audit-compliant system** ready for production use and regulatory scrutiny.
 
