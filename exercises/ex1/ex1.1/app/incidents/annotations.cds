@@ -69,6 +69,18 @@ annotate service.Incidents with @(
                 Width : 'auto',
             }
         },
+
+            // ✅ ADDED: Show assigned user in the list view
+        {
+            $Type : 'UI.DataField',
+            Value : assignedTo,
+            Label : '{i18n>AssignedTo}',
+            UI.LineItem : {
+                $Type : 'UI.LineItemType',
+                Width : 'auto',
+            }
+        },
+
         {
             $Type : 'UI.DataField',
             Value : status.descr,
@@ -83,16 +95,6 @@ annotate service.Incidents with @(
             $Type : 'UI.DataField',
             Value : urgency.descr,
             Label : '{i18n>Urgency}',
-            UI.LineItem : {
-                $Type : 'UI.LineItemType',
-                Width : 'auto',
-            }
-        },
-        // ✅ ADDED: Show assigned user in the list view
-        {
-            $Type : 'UI.DataField',
-            Value : assignedTo,
-            Label : '{i18n>AssignedTo}',
             UI.LineItem : {
                 $Type : 'UI.LineItemType',
                 Width : 'auto',
