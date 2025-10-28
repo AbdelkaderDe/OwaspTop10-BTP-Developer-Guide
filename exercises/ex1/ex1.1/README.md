@@ -104,7 +104,7 @@ annotate AdminService with @(requires: 'admin');
   - Try to modify the incident details (e.g., change the title or add a conversation entry).
   - Click "Save".
 - Result:
-  - ✅ The system prevents the update and displays an error (e.g., "403 Forbidden - Cannot modify a closed incident").
+  - ✅ The system prevents the update and displays an error (e.g., "Cannot modify a closed incident").
   - 👉 This is due to the existing check in services.js, which blocks updates on closed incidents regardless of the user role.
   - ❌ However, this does not mitigate the core Horizontal Privilege Escalation issue, as Alice can still update non-closed incidents not assigned to her.
 
