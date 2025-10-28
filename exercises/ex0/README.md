@@ -62,7 +62,7 @@ Navigate to Services > Instances and Subscriptions in the SAP BTP cockpit. Then 
 On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
 
 You will see your Dev Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
-If it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application. In the Workspace on the right side, you will find your incident management application.
+When it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application. In the Workspace on the right side, you will find your incident management application.
 
 Bookmark your SAP Business Application Studio link.
 
