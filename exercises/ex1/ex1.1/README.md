@@ -416,7 +416,9 @@ This section outlines the steps to confirm that the remediation for the Horizont
 The remediation is successful as a combination of:
 - Adding the 'assignedTo' field in schema.cds.
 - Implementing @restrict with where: 'assignedTo = $user'.
-- Enforcing business rules in services.js, eliminates Horizontal Privilege Escalation and enforces the principle of least privilege.
+- Enforcing business rules in services.js
+
+This eliminates Horizontal Privilege Escalation and enforces the principle of least privilege.
   
 ## 📌 6. Summary
 
