@@ -57,7 +57,7 @@ Under Cloud Foundry > Spaces, verify the existence of your space called 'xp260-0
 
 Now after these checks, you can open the SAP Business Application Studio. 
 
-Navigate to Services > Instances and Subscriptions in the SAP BTP cockpit. Then click on the small 'Go to Application' sign next to the name SAP Business Application Studio.
+Navigate to Services > Instances and Subscriptions in the SAP BTP cockpit. Then click on the small 'Go to Application' icon next to the name SAP Business Application Studio.
 
 On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
 
