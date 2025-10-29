@@ -3,9 +3,6 @@
 ## Overview 
 
 In this exercise, we will be using the [Incident Management application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference implementation for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (BTP).
-
-In this exercise, we will be using the Incident Management application. The Incident Management application is designed as a reference implementation for the SAP BTP Developer's Guide. It showcases best practices for developing applications on SAP Business Technology Platform.
-In the exercises, you will use an SAP BTP subaccount with a subaccount admin privileges. We use the Identity Authentication service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
  
 ### Business Scenario
 ACME, a leading electronics company, uses this application to manage customer service incidents. The application supports the following business process:
