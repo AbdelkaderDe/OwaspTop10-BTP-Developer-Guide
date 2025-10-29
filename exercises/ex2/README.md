@@ -28,7 +28,7 @@ This exercise demonstrates how unsanitized user inputs can be exploited to perfo
 
 - Understand how SQL Injection works and how unsafe handling of input can be exploited.
 - Learn to use CAP’s safe query APIs (parameterized queries) to prevent SQL Injection.
-- Test the remediation to confirm that malicious inputs are neutralized while legitimate application functionality remains intact.
+- Test the remediation to confirm that malicious input is neutralized while legitimate application functionality remains intact.
 
 ## 🚨 2. Vulnerable Code
 We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../ex1/ex1.2/README.md)  by introducing an SQL Injection vulnerability resulting from unsanitized user input.
