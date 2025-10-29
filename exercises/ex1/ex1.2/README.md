@@ -134,7 +134,7 @@ The fixes follow the principle of least privilege, ensuring support users are bl
 ### Key Remediation Steps
 
 * **Enhance Service-Level and Entity-Level Authorization:** Update services.cds to include explicit grants for admins and ensure proper role requirements.
-* **Implement Custom Validation Logic:** Add checks in services.js to validate urgency and user roles during UPDATE operations, rejecting invalid closures.
+* **Implement Custom Validation Logic:** Add checks in services.js to validate urgency and user roles during UPDATE operations, rejecting invalid closing of incidents.
 * **Improve UI Error Handling:** Modify the frontend to display meaningful error messages for forbidden actions.
 
 ### Step 1: Update Services.cds
