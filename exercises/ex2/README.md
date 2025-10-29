@@ -148,7 +148,7 @@ Authorization: Basic {{username}}:{{password}}
 
 ### Step 2: Exploit the SQL Injection Vulnerability
 - Action :
-  - Run the following commands from integrated terminal :
+  - Run the following commands from the integrated terminal :
 
 ```
   cds build
