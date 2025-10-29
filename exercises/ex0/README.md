@@ -2,7 +2,7 @@
 
 ## Overview 
 
-In this exercise, we will be using the [Incident Management application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (BTP).
+In this Hands-on exercises, we will be using the [Incident Management application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (BTP).
  
 ### Business Scenario
 ACME, a leading electronics company, uses this application to manage customer service incidents. The application supports the following business process:
@@ -66,28 +66,31 @@ The solution diagram illustrates the key components and their interactions withi
 
 ## Review the configured user access
 
-Check the users under Security > Users.
+- Check the users under **Security > Users**.
 
-Check your user xp260-0XX@education.cloud.sap. There will be two representations in the cockpit, one as platform user and one as business user. 
+- Check your user **xp260-0XX@education.cloud.sap**. There will be two representations in the cockpit, one as **platform user** and one as **business user**. 
 
-Check the role collections assigned to the platform user representation:
+- Check the role collections assigned to the platform user representation:
 - Select the user.
-- In the right frame, check if the role collection 'Subaccount Administrator' is assigned.
-
-Check the role collections assigned to the business user representation:
+- In the right frame, check if the role collection **'Subaccount Administrator'** is assigned.
+- Check the role collections assigned to the **business user** representation:
 - Select the user.
-- In the right frame, check if the role collections 'Business_Application_Studio_Administrator', 'Business_Application_Studio_Developer', 'Business_Application_Studio_Extension_Deployer', and 'Launchpad_Admin' are assigned.
+- In the right frame, check if the role collections :
+  - **Business_Application_Studio_Administrator**
+  - **Business_Application_Studio_Developer**
+  - **Business_Application_Studio_Extension_Deployer**
+  - **Launchpad_Admin' are assigned.**
 
-You will make use of some test users to test the application you are working on.
-- bob.support@company.com (Support user)
-- alice.support@company.com (Support user)
-- david.admin@company.com (Admin user)
+- You will make use of some test users to test the application you are working on.
+- **bob.support@company.com** (Support user)
+- **alice.support@company.com** (Support user)
+- **david.admin@company.com** (Admin user)
 
-Check the user role collections in the SAP BTP cockpit for Bob, Alice, and David:
+- Check the user role collections in the SAP BTP cockpit for Bob, Alice, and David:
 
 Select a user. In the right frame, check the role collections assigned:
-- Check if bob.support@company.com and alice.support@company.com are assigned to the role collection 'Incident Management Support'. 
-- Check if david.admin@company.com is assigned to the role collection 'Incident Management Admin'.
+- Check if **bob.support@company.com** and **alice.support@company.com** are assigned to the role collection **Incident Management Support**. 
+- Check if **david.admin@company.com** is assigned to the role collection **Incident Management Admin**.
 
 ## Review the development environment
  
