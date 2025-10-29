@@ -217,15 +217,16 @@ To address the identified vulnerabilities and data privacy risks, this section i
 npm install @cap-js/audit-logging
 ```  
 - Result:
-  - ✅ **Updates package.json** – The @cap-js/audit-logging dependency is automatically added to your project’s [package.json](./package.json) file.
-  - ✅ **Enables Automatic Audit Logging** – For every entity or field annotated with @PersonalData, all access and modifications are captured in real time.
+  - ✅ **Updates package.json** – The `@cap-js/audit-logging` dependency is automatically added to your project’s [package.json](./package.json) file.
+  - ✅ **Enables Automatic Audit Logging** – For every entity or field annotated with `@PersonalData`, all access and modifications are captured in real time.
   - ✅ **Tracks CRUD Operations** – Create, Read, Update, Delete on annotated data are fully traced.
   - ✅ **Generates GDPR-Compliant Audit Trails** – Logs are formatted to meet regulatory requirements, simplifying compliance reporting.
 
 ### Step 2: Annotate Personal Data
 
 - Action : 
-  - Copy the contents of [data-privacy.cds](./srv/data-privacy.cds) into a new project’s /srv/data-privacy.cds file.
+  - Create a new file /srv/data-privacy.cds in the project
+  - Copy the contents of [data-privacy.cds](./srv/data-privacy.cds) into the /srv/data-privacy.cds file.
   - Open 'data-privacy.cds' from your project and make sure the annotations for Customers and Addresses are present - exactly as shown here. 
 
 ```
@@ -255,7 +256,7 @@ annotate my.Addresses with @PersonalData : {
 }
 ```
 - Result:
-  - ✅ Sensitive fields like creditCardNo are marked as @PersonalData: #Sensitive for compliance.
+  - ✅ Sensitive fields like creditCardNo are marked as sensitive personal data.
   - ✅ Audit logs automatically include these fields in tracking, ensuring data privacy and regulatory adherence.
 
 ### Step 3: Create server.js with Custom 403 Handler
