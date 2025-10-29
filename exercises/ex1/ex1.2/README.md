@@ -104,7 +104,7 @@ class ProcessorService extends cds.ApplicationService {
 
 ### Step 2: Exploit Closing High-Urgency Incident
 - Action: 
-  - Find a high-urgency incident assigned to Alice (e.g., "Strange noise when switching off Inverter").
+  - Find a high-urgency incident assigned to Alice (e.g., "Strange noise when switching off Inverter"), or create a new incident with high urgency and assign it to Alice.
   - Click "Edit" → Change Status to "Closed".
   - Add a conversation message: "Closing this high-urgency incident as support user".
   - Click "Save".
