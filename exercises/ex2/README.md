@@ -147,7 +147,14 @@ Authorization: Basic {{username}}:{{password}}
     - Test 3: A SQL Injection using multiple SQL statements.
 
 ### Step 2: Exploit the SQL Injection Vulnerability
+- Action :
+  - Run the following commands from integrated terminal :
 
+```
+  cds build
+  cds deploy
+  cds watch
+```
 - Action:
   - Open the `sql-injection-demo.http` file in your editor.
   - Confirm in your `package.json` file that the user `incident.support@tester.sap.com` is assigned the `admin` role under the `cds.requires.[development].auth.users` configuration.
