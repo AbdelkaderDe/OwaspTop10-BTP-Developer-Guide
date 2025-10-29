@@ -94,7 +94,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
         service: auditlog
         service-plan: standard
     ```
-  - Then, locate the incident-management-srv module and verify that the **requires:** section includes the binding in line 33:  
+  - Then, locate the incident-management-srv module in the 'mta.yaml' file and verify that the **requires:** section in line 33 includes the binding:  
     
     ```
     requires:
