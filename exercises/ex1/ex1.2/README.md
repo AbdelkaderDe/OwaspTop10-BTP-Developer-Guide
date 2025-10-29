@@ -290,8 +290,8 @@ The remediation successfully addresses Vertical Privilege Escalation by
   - Can close high-urgency incidents and modify closed incidents.
 
 **3. Security Mechanisms:**
-  - Declarative Security: @restrict rules in services.cds enforce role-based access.
-  - Imperative Security: services.js handlers (e.g., onModify) validate business rules.
+  - Declarative Security: `@restrict` rules in services.cds enforce role-based access.
+  - Imperative Security: services.js handlers (e.g., `onModify`) validate business rules.
   - Defense in Depth: Combined CDS annotations and JavaScript logic prevent bypasses.
 
 ## 📌 6. Summary
@@ -300,8 +300,8 @@ In these exercises, you have learned how to
   - Mitigate Vertical Privilege Escalation by explicitly defining admin-only operations in @restrict rules.
   - Leverage CAP’s Role-Based Access Control (RBAC) to separate support and admin tasks.
   - Combine Declarative and Imperative Security for comprehensive protection:
-    * CDS Annotations (@restrict) for coarse-grained access control.
-    * JavaScript Handlers (e.g., onModify) for fine-grained business logic enforcement.
+    * CDS Annotations (`@restrict`) for coarse-grained access control.
+    * JavaScript Handlers (e.g., `onModify`) for fine-grained business logic enforcement.
   - Test Security Rules by validating both allowed and denied operations for each role.
     
 👉 Next up: [Exercise 2 - SQL injection](../../ex2/README.md), where we address critical  [OWASP Top 10 2021 list (A03)](https://owasp.org/Top10/A03_2021-Injection/).
