@@ -169,7 +169,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer service.
 - ▶️ **Action: Create a Role Collection for SAP Audit Log Viewer service Access**
-  - Log in to the SAP BTP cockpit with your assigned user **XP260-0xx@education.cloud.sap (Business User)** and navigate to your subaccount.
+  - Log in to the SAP BTP cockpit with your assigned user **XP260-0xx@education.cloud.sap** and navigate to your subaccount.
   - Go to Security > Role Collections.
   - Click the Create button.
   - Enter the following details:
@@ -182,13 +182,9 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 - ▶️ **Action: Add Roles to the Role Collection and Assign the Role Collection to Your User**
      - In the Role Collections list, locate and click on the **auditlog-viewer role collection** you just created.
      - Click the **Edit** button.
-     - In the **Roles** sections, add the following roles:
-        - Role Name : **auditlog-viewer**
-        - Role Description :  **View audit logs**
-        - Role Name : **auditlog-management**
-        - Role Description :  **Read access to audit logs**
-    - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User.
-    - Click Save.
+     - In the **Roles** sections, add the 2 roles with the role name "Auditlog_Auditor". One has the application identifier "auditlog-management*", the other "auditlog-viewer*".
+     - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User.
+     - Click Save.
 
 - ✅ **Result: Roles Successfully Assigned**
     - The required roles have been added to the **auditlog-viewer** role collection, which is now assigned to your user account. This enables you to access the **SAP Audit Log Viewer service**. See screenshot:
