@@ -151,7 +151,7 @@ Authorization: Basic {{username}}:{{password}}
 - Action:
   - Open the `sql-injection-demo.http` file in your editor.
   - Confirm in your `package.json` file that the user `incident.support@tester.sap.com` is assigned the `admin` role under the `cds.requires.[development].auth.users` configuration.
-  - Navigates to a function in ###Step2 that looks up customer information and click on send request.
+  - In `sql-injection-demo.http`, navigate to ###Step2 that looks up customer information and click on send request.
   
 ``` 
   ### 🚨 Test 2: SQL Injection True-Clause Attack
