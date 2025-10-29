@@ -77,7 +77,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 1. Integrate Audit Logging Feature into CAP Application
 
-- ⚠️ Note: Ensure **[@cap-js/audit-logging](../ex3.1/README.md#step-1-add-audit-logging-dependency)** is installed.
+- ⚠️ Note: Ensure **[@cap-js/audit-logging](../ex3.1/README.md#step-1-add-audit-logging-dependency)** is installed. You find the dependency in the top level 'packages.json' file.
 
 - ▶️ **Action:** Execute the following command in your terminal:
     ```
