@@ -252,7 +252,7 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
 
 ### Step 3: Verify Alice Can Modify Non-High-Urgency Incidents
 - Action:
-  - Locate a medium-urgency or low-urgency incident assigned to Alice or unassigned.
+  - Locate a medium-urgency or low-urgency incident assigned to Alice or unassigned. If none exists, create it.
   - Click "Edit", change status to "Closed", and save.
 - Result:
   - ✅ The system allows the update and closes the incident.
