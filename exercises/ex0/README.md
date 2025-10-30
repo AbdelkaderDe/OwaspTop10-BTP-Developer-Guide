@@ -2,6 +2,8 @@
 
 # Table of Contents
 
+# Table of Contents
+
 - [Overview](#overview)
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
@@ -13,7 +15,9 @@
   - [Review the Configured User Access](#review-the-configured-user-access)
 - [Review the Development Environment](#review-the-development-environment)
 - [Launch SAP Business Application Studio](#launch-sap-business-application-studio)
-  - [Login to your Cloud Foundry Environment from SAP Business Application Studio](#-login-to-your-cloud-foundry-environment-from-sap-business-application-studio)
+- [Login to Your Cloud Foundry Environment from SAP Business Application Studio](#login-to-your-cloud-foundry-environment-from-sap-business-application-studio)
+  - [Login Using the User Interface (UI)](#login-using-the-user-interface-ui)
+  - [Login Using the Command Line (Terminal)](#login-using-the-command-line-terminal)
 - [Launch SAP Build Work Zone](#launch-sap-build-work-zone)
 - [Summary](#summary)
 
@@ -209,7 +213,7 @@ Now after these checks, you can open the SAP Business Application Studio.
 ## Login to Your Cloud Foundry Environment from SAP Business Application Studio
 Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications.
 
-### Login Using the User Interface (UI)
+## Login Using the User Interface (UI)
 
 1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from Hamburger menu.
 
@@ -231,7 +235,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 11. Click on **Apply** button
 12. Once connected, a pop up in the status bar in BAS should display your org and space information.
   
-### Login Using the Command Line (Terminal)
+## Login Using the Command Line (Terminal)
 
 1. **Open Terminal**
    - In SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu
@@ -241,8 +245,9 @@ Once you have SAP Business Application Studio open with your secure incident man
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
 3- When prompted:
-    - Email: xp260-0XX@education.cloud.sap
-    - Password: Use the password provided during the session.
+  * Email: xp260-0XX@education.cloud.sap
+  * Password: Use the password provided during the session.
+    
 4- To verify the login, run
   ```
     cf target
