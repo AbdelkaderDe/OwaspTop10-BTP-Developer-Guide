@@ -332,12 +332,14 @@ Authorization: Basic incident.support@tester.sap.com:initial
 
 ### Step 3: Test Additional Malicious Payloads (Optional)
 - Action:
-  - - Execute the **Test 3: SQL Injection - multiple sql statements payloads to ensure robustness:**
+  - - Execute the **Test 3: Union-Based SQL Injection**
 
 ```
   ### Test 3: SQL Injection -  multiple sql statements
-  ### Payload: 'UNION SELECT * FROM Customers --"   (multiple sql statements)
-  ### Expected: Returns empty array
+  # Payload: '; SELECT * FROM sap_capire_incidents_Customers;--
+  # Expected: 
+  #   - CAP's SQLite adapter blocks multiple statements (HTTP 400)
+  #   - Other databases (HANA/PostgreSQL) might execute both queries
   GET  {{server}}/odata/v4/admin/fetchCustomer
   Content-Type: application/json
   Authorization: Basic {{username}}:{{password}}
