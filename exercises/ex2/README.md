@@ -285,7 +285,7 @@ This section outlines the steps to confirm that the remediation for the SQL Inje
 * 💡**Note:** Ensure the deployment includes the updated [services.js](./srv/services.js) file with the secure parameterized query implementation.
 
 - Open the sql-injection-demo.http file.
-- Execute the **Test 1: Legitimate Customer Lookup request:**
+- Execute the **Test 1: Legitimate Request** by clicking on "Send Request" above line 17:
 
 ```
 GET http://localhost:4004/odata/v4/admin/fetchCustomer
