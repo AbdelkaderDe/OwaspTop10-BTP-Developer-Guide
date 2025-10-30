@@ -83,21 +83,21 @@ The solution diagram illustrates the key components and their interactions withi
 
 #### Review the Configured User Access
 
-- Check the users under **Security > Users**.
+1- Check the users under **Security > Users**.
 
-- Check your user **xp260-0XX@education.cloud.sap**. There will be two representations in the cockpit, one as **platform user** and one as **business user**. 
+2- Check your user **xp260-0XX@education.cloud.sap**. There will be two representations in the cockpit, one as **platform user** and one as **business user**. 
 
-- Check the role collections assigned to the platform user representation:
-- Select the user.
-- In the right frame, check if the role collection **'Subaccount Administrator'** is assigned.
-- Check the role collections assigned to the **business user** representation:
-- Select the user.
-- In the right frame, check if the following role collections are assigned:
-  - **Business_Application_Studio_Administrator**
-  - **Business_Application_Studio_Developer**
-  - **Business_Application_Studio_Extension_Deployer**
-  - **Launchpad_Admin**
-  - **Subaccount Viewer**
+3- Check the role collections assigned to the platform user representation:
+    - Select the user.
+    - In the right frame, check if the role collection **'Subaccount Administrator'** is assigned.
+    - Check the role collections assigned to the **business user** representation:
+    - Select the user.
+    - In the right frame, check if the following role collections are assigned:
+      - **Business_Application_Studio_Administrator**
+      - **Business_Application_Studio_Developer**
+      - **Business_Application_Studio_Extension_Deployer**
+      - **Launchpad_Admin**
+      - **Subaccount Viewer**
 
   <p align="center">
     <img src="images/btp-configured_user_platform.png" alt="" width="900"/>
@@ -105,14 +105,14 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-- You will make use of some test users to test the application you are working on :
+3- You will make use of some test users to test the application you are working on :
   - **bob.support@company.com** (Support user)
   - **alice.support@company.com** (Support user)
   - **david.admin@company.com** (Admin user)
   - Check the user role collections in the SAP BTP cockpit for **Bob, Alice, and David**:
-  - Select a user. In the right frame, check the role collections assigned:
-  - Check if **bob.support@company.com** and **alice.support@company.com** are assigned to the role collection **Incident Management Support**. 
-  - Check if **david.admin@company.com** is assigned to the role collection **Incident Management Admin**.
+      - Select a user. In the right frame, check the role collections assigned:
+      - Check if **bob.support@company.com** and **alice.support@company.com** are assigned to the role collection **Incident Management Support**. 
+      - Check if **david.admin@company.com** is assigned to the role collection **Incident Management Admin**.
 
  <p align="center">
     <img src="images/btp-configured_user_application.png" alt="" width="900"/>
@@ -122,7 +122,7 @@ The solution diagram illustrates the key components and their interactions withi
 
 ## Review the Development Environment
  
-- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members** , if your platform user **xp260-0XX@education.cloud.sap** has **Org Manager,Org User** under **Org Roles**. 
+1- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members** , if your platform user **xp260-0XX@education.cloud.sap** has **Org Manager,Org User** under **Org Roles**. 
 
  <p align="center">
     <img src="images/btp-subaccount-org-members.png" alt="" width="900"/>
@@ -130,7 +130,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-- Under **Cloud Foundry > Spaces**, verify the existence of your space called **'XP260-0XX'**.
+2- Under **Cloud Foundry > Spaces**, verify the existence of your space called **'XP260-0XX'**.
   
  <p align="center">
     <img src="images/btp-subaccount-space.png" alt="" width="900"/>
@@ -138,7 +138,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-- Under Space **XP260-0XX > Space Members**, verify if your platform user **xp260-0XX@education.cloud.sap** has **Space developer, Space Manager** under **Space Roles**.
+3- Under Space **XP260-0XX > Space Members**, verify if your platform user **xp260-0XX@education.cloud.sap** has **Space developer, Space Manager** under **Space Roles**.
 
  <p align="center">
     <img src="images/btp-subaccount-space-members.png" alt="" width="900"/>
@@ -150,7 +150,7 @@ The solution diagram illustrates the key components and their interactions withi
 
 Now after these checks, you can open the SAP Business Application Studio. 
 
-- Navigate to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Then click on the small **Go to Application** icon next to the name SAP Business Application Studio.
+1- Navigate to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Then click on the small **Go to Application** icon next to the name SAP Business Application Studio.
 
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-application.png" alt="" width="900"/>
@@ -158,14 +158,14 @@ Now after these checks, you can open the SAP Business Application Studio.
     <b></b>
   </p>
 
-- On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
+2- On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
 
-- Enter email and password in the login window.
+3- Enter email and password in the login window.
 
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-login-windows.png" alt="" width="450"/>
@@ -173,7 +173,7 @@ Now after these checks, you can open the SAP Business Application Studio.
     <b></b>
   </p>
 
-- You will see your Dev Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
+4- You will see your Dev Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
 
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-dev-space-stopped.png" alt="" width="900"/>
@@ -181,7 +181,7 @@ Now after these checks, you can open the SAP Business Application Studio.
     <b></b>
   </p>
   
-- When it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application.
+5- When it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application.
 
  <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-space-running.png" alt="" width="900"/>
@@ -189,7 +189,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   <b></b>
 </p>
 
-- Click on the incident-management to open the application in your workspace.
+6- Click on the incident-management to open the application in your workspace.
 
  <p align="center">
   <img src="images/btp-subaccount-open-BAS-open-secure-incident-management.png" alt="" width="900"/>
@@ -205,13 +205,22 @@ Now after these checks, you can open the SAP Business Application Studio.
 </p>
 
 
-
-
-
 ## Login to Your Cloud Foundry Environment from SAP Business Application Studio
+Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications.
 
-### - login using UI
-### - login using command line
+### Login Using the User Interface (UI)
+1. In SAP Business Application Studio, open the **Command Palette** (press `Ctrl+Shift+P` or select **View > Command Palette**) from Hamburger menu.
+   btp-subaccount-open-BAS-command-palette.png
+   
+   
+3. Search for and select **CF: Login to Cloud Foundry**.  
+4. In the login dialog:
+   - Enter the Cloud Foundry API endpoint provided for your SAP BTP subaccount.
+   - Choose the correct **Organization** and **Space** (for example, `XP260-0XX`).
+5. Once connected, verify the login by checking the status bar in BAS — it should display your org and space information.
+
+### Login Using the Command Line (Terminal)
+
 
 
 
