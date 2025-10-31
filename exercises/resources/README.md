@@ -26,6 +26,6 @@
 
 ## Recorded Sessions
 -  [UI5con 2024: Adding AI to SAP Fiori elements apps at both design time and runtime](https://www.youtube.com/live/MSdGLG2zLy8?t=26430s)
--  [TechEd 2023 lecture: Discover New Capabilities of SAPUI5 with Pro-Code Tools](https://go3.events.sap.com/sapteched/virtual/2023/reg/flow/sap/sapteched23/catalog/page/catalog/session/1693019545254001fbAF)
--  [TechEd 2023 lecture: Develop SAPUI5 Applications with Pro-Code Tools and SAP Best Practices](https://go3.events.sap.com/sapteched/virtual/2023/reg/flow/sap/sapteched23/catalog/page/catalog/session/1693019545106001fWu1)
+-  TechEd 2023 lecture: Discover New Capabilities of SAPUI5 with Pro-Code Tools
+-  TechEd 2023 lecture: Develop SAPUI5 Applications with Pro-Code Tools and SAP Best Practices
 -  [TechEd 2023 hands-on session: Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools](https://github.com/SAP-samples/teched2023-DT262)
