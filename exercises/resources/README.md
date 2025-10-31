@@ -18,7 +18,7 @@
 -  [Develop an Enterprise-Grade CAP Application following the SAP BTP Developer's Guide](https://discovery-center.cloud.sap/missiondetail/4431/4717/)
 -  [Developing and Extending SAP Fiori Elements Apps](https://learning.sap.com/courses/developing-and-extending-sap-fiori-elements-apps)
 -  [Getting Started with In-App Extensibility in SAP S/4HANA](https://learning.sap.com/learning-journey/get-started-with-in-app-extensibility-in-sap-s-4hana)
--  [Develop Extensions Using SAP S/4HANA Cloud, ABAP Environment](https://learning.sap.com/learning-journey/develop-extensions-using-sap-s-4hana-cloud-abap-environment)
+-  Develop Extensions Using SAP S/4HANA Cloud, ABAP Environment
 -  [Develop an SAP Fiori Elements App based on a CAP OData V4 Service](https://learning.sap.com/preview/learning-journey/developing-an-sap-fiori-elements-app-based-on-a-cap-odata-v4-service)
 -  [Create an SAP S/4HANA extension app in 60 minutes](https://blogs.sap.com/2023/09/18/creating-an-s-4-extension-app-in-60-minutes/)
 -  [Create a Full-Stack SAP Fiori Application with Joule in SAP Build Code](https://developers.sap.com/tutorials/build-code-test-drive.html)
