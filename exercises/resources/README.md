@@ -21,7 +21,7 @@
 -  Develop Extensions Using SAP S/4HANA Cloud, ABAP Environment
 -  Develop an SAP Fiori Elements App based on a CAP OData V4 Service
 -  [Create an SAP S/4HANA extension app in 60 minutes](https://blogs.sap.com/2023/09/18/creating-an-s-4-extension-app-in-60-minutes/)
--  [Create a Full-Stack SAP Fiori Application with Joule in SAP Build Code](https://developers.sap.com/tutorials/build-code-test-drive.html)
+-  Create a Full-Stack SAP Fiori Application with Joule in SAP Build Code
 -  [Work with SAPUI5 Adaptation Projects to Make Changes and Extend the Source Code of an Application Variant of an SAP Fiori Application in SAP S/4HANA Cloud Public Edition](https://developers.sap.com/group.sapui5-adaptation-projects.html)
 
 ## Recorded Sessions
