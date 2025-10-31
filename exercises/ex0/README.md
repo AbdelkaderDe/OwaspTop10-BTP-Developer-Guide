@@ -1,6 +1,6 @@
-<img width="175" height="19" alt="image" src="https://github.com/user-attachments/assets/ee926325-d0b3-4b13-84d2-74780ae62882" /># Getting Started
+# Getting Started
 
-# Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
   - [Business Scenario](#business-scenario)
