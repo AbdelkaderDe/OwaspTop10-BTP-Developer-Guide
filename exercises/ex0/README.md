@@ -160,7 +160,8 @@ Now after these checks, you can open the SAP Business Application Studio.
     <b></b>
   </p>
 
-2- On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
+2- On the logon screen, click on the custom identity provider (IDP) ***akihlqzx8.accounts.ondemand.com** to login with single sign-on (SSO). 
+  - **Note** If prompted for an **Origin Key**, enter: **akihlqzx8-platform**
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
     <br>
