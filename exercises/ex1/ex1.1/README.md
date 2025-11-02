@@ -370,7 +370,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
   ```
   npm update
   ```  
-- Unless you alreadey logged in in the "Getting Started" section, login with the Cloud Foundry command line interface.
+- Unless you already logged-in in the "Getting Started" section, login with the Cloud Foundry command line interface.
   ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
