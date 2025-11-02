@@ -370,12 +370,12 @@ This section outlines the steps to confirm that the remediation for the Horizont
   ```
   npm update
   ```  
-- Login with the Cloud Foundry command line interface.
+- Unless you alreadey logged in in the "Getting Started" section, login with the Cloud Foundry command line interface.
   ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
-- Enter your credentials, email "XP260***@education.cloud.sap" and the corresponding password.
-- As you are only assigned to one org and one space, these are selected automatically.
+  - Enter your credentials, email "XP260***@education.cloud.sap" and the corresponding password.
+  - As you are only assigned to one org and one space, these are selected automatically.
 - Start the build and deploy the new version. These steps may take a few minutes.  
   ```
   mbt build
