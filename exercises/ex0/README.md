@@ -281,6 +281,13 @@ Once you have SAP Business Application Studio open with your secure incident man
 1. **Open Terminal**
    - In SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu
    - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+   
 2. **Run the following command to log in:**
   ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
