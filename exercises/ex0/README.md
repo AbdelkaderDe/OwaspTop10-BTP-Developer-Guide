@@ -208,7 +208,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   <b></b>
 </p>
 
-7- Bookmark your SAP Business Application Studio link.
+7- **Bookmark your SAP Business Application Studio link**.
 
 ## Login to Your Cloud Foundry Environment from SAP Business Application Studio
 Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications. Choose one of the following methods to log in:
@@ -231,14 +231,14 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-4. You’ll see a **Cloud Foundry Sign In Targets**. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
+3. You’ll see a **Cloud Foundry Sign In Targets**. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-6. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
+4. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
 - ⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
 
 <p align="center">
@@ -247,28 +247,28 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-7. You’ll see a passcode page, copy the temporary authentication code generated in the **Passcode** field.
+5. You’ll see a passcode page, copy the temporary authentication code generated in the **Passcode** field.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-10. Paste the **SSO Passcode** back into BAS and click on **Sign In** button
+6. Paste the **SSO Passcode** back into BAS and click on **Sign In** button
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-11. In section **Cloud Foundry Target** select **Organization** and **Space** (for example, `XP260-0XX`) then click on **Apply** button.
+7. In section **Cloud Foundry Target** select **Organization** and **Space** (for example, `XP260-0XX`) then click on **Apply** button.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-13. Once connected, a notification message pop up in the status bar in BAS should confirms that your Cloud Foundry organization and space have been set and are ready for use.
+8. Once connected, a notification message pop up in the status bar in BAS should confirms that your Cloud Foundry organization and space have been set and are ready for use.
 
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
@@ -300,7 +300,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   ```
     cf target
   ```
-- You should see the current organization and space listed.
+5- You should see the current organization and space listed.
   
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
@@ -308,14 +308,43 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-
 ## Launch SAP Build Work Zone
 
-Go back to Services > Instances and Subscriptions in the SAP BTP cockpit. Click on the 'Go to Application' icon next to the SAP Build Work Zone, standard edition application to open the SAP Build Work Zone application. 
+1- Go back to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Click on the **Go to Application** icon next to the **SAP Build Work Zone, standard edition** application to open the SAP Build Work Zone application. 
 
-Check if the Secure Incident Management Site is present. Click on the "Go to site" icon. When the Incident Management tile is displayed, sign out of the application and login with the alice.support@company.com user. Click on the tile to open the incident management application and bookmark the URL. 
+<p align="center">
+  <img src="images/btp-subaccount-open-SAP-Build-Work-Zone.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+2- Check if the **Incident Management** Site is present. Click on the **Go to site** icon. 
+
+<p align="center">
+  <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-Site.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+3- When the **Incident Management tile** is displayed, **Sign Out** from your current user **XP260-0xx@education.cloud.sap** and login to the application with the **alice.support@company.com** user. 
+
+<p align="center">
+  <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-sign-out.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+4- Click on the tile to open the incident management application and **bookmark the URL**. 
+
+<p align="center">
+  <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-open-incident-management.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
 
 Now you are ready to start the exercises. 
+
 
 ## Summary
 
