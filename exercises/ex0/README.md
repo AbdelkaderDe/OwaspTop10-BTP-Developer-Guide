@@ -83,7 +83,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-#### Review the Configured User Access
+### Review the Configured User Access
 
 1- Check the users under **Security > Users**.
 
