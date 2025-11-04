@@ -14,8 +14,8 @@
 - [Review the Development Environment](#review-the-development-environment)
 - [Launch SAP Business Application Studio](#launch-sap-business-application-studio)
 - [Login to Your Cloud Foundry Environment from SAP Business Application Studio](#login-to-your-cloud-foundry-environment-from-sap-business-application-studio)
-  - [Login Using the User Interface (UI)](#login-using-the-user-interface-ui)
-  - [Login Using the Command Line (Terminal)](#login-using-the-command-line-terminal)
+  - [Login Using the User Interface (UI)](#1-login-using-the-user-interface-ui)
+  - [Login Using the Command Line (Terminal)](#2-login-using-the-command-line-terminal)
 - [Launch SAP Build Work Zone](#launch-sap-build-work-zone)
 - [Summary](#summary)
   
