@@ -90,11 +90,10 @@ The solution diagram illustrates the key components and their interactions withi
 2- Check your user **xp260-0XX@education.cloud.sap**. There will be two representations in the cockpit, one as **platform user** and one as **business user**. 
 
 3- Check the role collections assigned to the platform user representation:
-    - Select the user.
-    - In the right frame, check if the role collection **'Subaccount Administrator'** is assigned.
-    - Check the role collections assigned to the **business user** representation:
-    - Select the user.
-    - In the right frame, check if the following role collections are assigned:
+  - Select the user.
+  - In the right frame, check if the role collection **'Subaccount Administrator'** is assigned.
+  - Check the role collections assigned to the **business user** representation:
+  - Select the user. In the right frame, check if the following role collections are assigned:
       - **Business_Application_Studio_Administrator**
       - **Business_Application_Studio_Developer**
       - **Business_Application_Studio_Extension_Deployer**
@@ -111,8 +110,8 @@ The solution diagram illustrates the key components and their interactions withi
   - **bob.support@company.com** (Support user)
   - **alice.support@company.com** (Support user)
   - **david.admin@company.com** (Admin user)
-  - Check the user role collections in the SAP BTP cockpit for **Bob, Alice, and David**:
-      - Select a user. In the right frame, check the role collections assigned:
+  - Check the user role collections in the SAP BTP cockpit for **Bob, Alice, and David**
+  - Select a user. In the right frame, check the role collections assigned:
       - Check if **bob.support@company.com** and **alice.support@company.com** are assigned to the role collection **Incident Management Support**. 
       - Check if **david.admin@company.com** is assigned to the role collection **Incident Management Admin**.
 
