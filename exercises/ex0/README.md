@@ -89,11 +89,10 @@ The solution diagram illustrates the key components and their interactions withi
 
 2- Check your user **xp260-0XX@education.cloud.sap**. There will be two representations in the cockpit, one as **platform user** and one as **business user**. 
 
-3- Check the role collections assigned to the platform user representation:
-  - Select the user.
-  - In the right frame, check if the role collection **'Subaccount Administrator'** is assigned.
-  - Check the role collections assigned to the **business user** representation:
-  - Select the user. In the right frame, check if the following role collections are assigned:
+3- Check **Role Collections** for the Business User
+  - Locate and click on the business user representation in the user management interface.
+  - Open the Role Collection Details in the right frame.
+  - Confirm the Following Role Collections Are Assigned :
       - **Business_Application_Studio_Administrator**
       - **Business_Application_Studio_Developer**
       - **Business_Application_Studio_Extension_Deployer**
@@ -106,7 +105,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-3- You will make use of some test users to test the application you are working on:
+4- You will make use of some test users to test the application you are working on:
   - **bob.support@company.com** (Support user)
   - **alice.support@company.com** (Support user)
   - **david.admin@company.com** (Admin user)
