@@ -21,17 +21,17 @@
   
 ## Overview 
 
-In this Hands-on exercises, we will be using the [Incident Management application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (BTP).
+In these hands-on exercises, we will be using the [Incident Management Application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
  
 ### Business Scenario
 ACME, a leading electronics company, uses this application to manage customer service incidents. The application supports the following business process:
   1. A customer contacts ACME's call center with an issue.
-  2. A call center representative (Processor) receives the call.
+  2. A call center representative (processor) receives the call.
   3. The representative creates a new incident in the system based on the customer's complaint.
   4. The conversation details are recorded as part of the incident.
 
 ### Solution Diagram
-The solution diagram illustrates the key components and their interactions within the Incident Management Application deployed on SAP Business Technology Platform (BTP).
+The solution diagram illustrates the key components and their interactions within the Incident Management Application deployed on SAP Business Technology Platform (SAP BTP).
 
   <p align="center">
     <img src="images/solution-diagram-incident-management.png" alt="" width="900"/>
@@ -40,13 +40,13 @@ The solution diagram illustrates the key components and their interactions withi
   </p>
 
 ## Access your SAP BTP Subaccount
-- Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
+- Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
 
-- ⚠️ **Note:** You will use an SAP BTP subaccount with a subaccount admin privileges. We use the Identity Authentication service tenant **akihlqzx8.accounts.ondemand.com** as custom identity provider, both for platform and application users.
+- ⚠️ **Note:** You will use an SAP BTP subaccount with subaccount admin privileges. We use the Identity Authentication service tenant **akihlqzx8.accounts.ondemand.com** as custom identity provider, both for platform and application users.
 
-- Login to open your subaccount **XP260_0XX**, where **XX** is your seat number : 
+- Login to open your subaccount **XP260_0XX**, where **XX** is your seat number: 
   - Username: **xp260-0XX@education.cloud.sap** ( with XX depending on your seat from 01 - 40 )
-  - Password: Will be given to you as part of the session
+  - Password: Will be given to you as part of the session.
   - In the list of directories and subaccounts, click on the entry for your subaccount.
 
 ### Review the Subscribed Services and Instances 
@@ -75,7 +75,7 @@ The solution diagram illustrates the key components and their interactions withi
 | :------------------ | :-------   |
 | Cloud Foundry Runtime | standard |
 
-- Check the subscriptions, instances and the environment under Subaccount **XP260_0xx > Instances and Subscriptions** in the **SAP BTP cockpit**.
+- Check the subscriptions, instances, and the environment under subaccount **XP260_0xx > Instances and Subscriptions** in the **SAP BTP cockpit**.
  
   <p align="center">
     <img src="images/btp-subaccount-instances-subscriptions.png" alt="" width="900"/>
@@ -107,7 +107,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-3- You will make use of some test users to test the application you are working on :
+3- You will make use of some test users to test the application you are working on:
   - **bob.support@company.com** (Support user)
   - **alice.support@company.com** (Support user)
   - **david.admin@company.com** (Admin user)
@@ -124,7 +124,7 @@ The solution diagram illustrates the key components and their interactions withi
 
 ## Review the Development Environment
  
-1- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members** , if your platform user **xp260-0XX@education.cloud.sap** has **Org Manager,Org User** under **Org Roles**. 
+1- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members**, if your platform user **xp260-0XX@education.cloud.sap** has **Org Manager, Org User** under **Org Roles**. 
 
  <p align="center">
     <img src="images/btp-subaccount-org-members.png" alt="" width="900"/>
@@ -140,7 +140,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-3- Under Space **XP260-0XX > Space Members**, verify if your platform user **xp260-0XX@education.cloud.sap** has **Space developer, Space Manager** under **Space Roles**.
+3- Under Space **XP260-0XX > Space Members**, verify if your platform user **xp260-0XX@education.cloud.sap** has **Space Developer, Space Manager** under **Space Roles**.
 
  <p align="center">
     <img src="images/btp-subaccount-space-members.png" alt="" width="900"/>
@@ -160,7 +160,7 @@ Now after these checks, you can open the SAP Business Application Studio.
     <b></b>
   </p>
 
-2- On the logon screen, click on the custom identity provider (IDP) ***akihlqzx8.accounts.ondemand.com** to login with single sign-on (SSO). 
+2- On the logon screen, click on the custom identity provider (IDP) **akihlqzx8.accounts.ondemand.com** to login with single sign-on (SSO). 
 - ⚠️ **Note:** If prompted for an **Origin Key**, enter: **akihlqzx8-platform**
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
@@ -193,7 +193,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   <b></b>
 </p>
 
-6- Click on the incident-management to open the application in your workspace.
+6- Click on **incident-management** to open the application in your workspace.
 
  <p align="center">
   <img src="images/btp-subaccount-open-BAS-open-secure-incident-management.png" alt="" width="900"/>
@@ -201,7 +201,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   <b></b>
 </p>
 
-- In the Workspace on the right side, you will find your incident management application in the list of projects.
+- In the workspace on the right side, you will find your incident management application in the list of projects.
  <p align="center">
   <img src="images/btp-subaccount-open-BAS-folder-explorer.png" alt="" width="900"/>
   <br>
@@ -215,7 +215,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 
 ### 1. Login Using the User Interface (UI)
 
-1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from Hamburger menu.
+1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
 
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
@@ -231,7 +231,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-3. You’ll see a **Cloud Foundry Sign In Targets**. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
+3. You’ll see **Cloud Foundry Sign In and Targets**. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
   <br>
@@ -239,7 +239,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 </p>
 
 4. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
-- ⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
+- ⚠️ **Note:** If your account is not displayed, click **Sign in to another account**.
 
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-idp.png" alt="" width="900"/>
@@ -254,21 +254,21 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-6. Paste the **SSO Passcode** back into BAS and click on **Sign In** button
+6. Paste the **SSO Passcode** back into the SAP Business Application Studio and click on the **Sign In** button.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-7. In section **Cloud Foundry Target** select **Organization** and **Space** (for example, `XP260-0XX`) then click on **Apply** button.
+7. In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `XP260-0XX`), then click on the **Apply** button.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-8. Once connected, a notification message pop up in the status bar in BAS should confirms that your Cloud Foundry organization and space have been set and are ready for use.
+8. Once connected, a notification message pops up in the status bar in the SAP Business Application Studio confirming that your Cloud Foundry organization and space have been set and are ready for use.
 
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
@@ -279,8 +279,8 @@ Once you have SAP Business Application Studio open with your secure incident man
 ### 2. Login Using the Command Line (Terminal)
 
 1. **Open Terminal**
-   - In SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu
-   - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**
+   - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
+   - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
 
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
@@ -292,7 +292,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
-3. When prompted:
+3. When prompted enter:
     * Email: xp260-0XX@education.cloud.sap
     * Password: Use the password provided during the session.
     
