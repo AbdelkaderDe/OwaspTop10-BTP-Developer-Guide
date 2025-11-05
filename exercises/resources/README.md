@@ -1,4 +1,4 @@
-# Additional resources for developing secure applications
+# Additional Resources for Developing Secure Applications
 
 ## Security Considerations for Applications
 -   [Explore](https://help.sap.com/docs/btp/btp-developers-guide/building-blocks?q=Security+Considerations#security-considerations-in-the-explore-phase)
@@ -7,21 +7,21 @@
 -   [Develop](https://help.sap.com/docs/btp/btp-developers-guide/security-considerations-for-applications?q=Security+Considerations)
 -   [Run and Scale](https://help.sap.com/docs/btp/btp-developers-guide/run-and-scale?q=Security+Considerations#security-considerations-in-the-run-and-scale-phase)
 
-## Topics pages on the SAP Community
-- [Cloud Application Programming](https://pages.community.sap.com/topics/cloud-application-programming)
+## Topic Pages at SAP Community
+- [SAP Cloud Application Programming Model](https://pages.community.sap.com/topics/cloud-application-programming)
 - [SAP Fiori tools](https://pages.community.sap.com/topics/fiori-tools)
 - [SAP Build Code](https://pages.community.sap.com/topics/build-code) 
-- [ABAP (includes RAP)](https://pages.community.sap.com/topics/abap)
+- [ABAP Development (includes RAP)](https://pages.community.sap.com/topics/abap)
   
-## Other resources
+## Other Resources
   
-- [Flexible Programming Model Explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction)
+- [Flexible Programming Model Explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html)
 - [SAPUI5 documentation for SAP Fiori elements](https://sapui5.hana.ondemand.com/#/topic/03265b0408e2432c9571d6b3feb6b1fd)
-- [SAP Fiori development newsletter](https://www.sap.com/cmp/nl/sap-fiori-development-newsletter/index.html)
+- [SAP Fiori Development Newsletter](https://www.sap.com/cmp/nl/sap-fiori-development-newsletter/index.html)
 
 ## Tutorials
-- [BTP Developer Guide for CAP](https://github.com/SAP-samples/btp-developer-guide-cap/tree/main/documentation)
-- [Develop a Full Stack CAP Application following the SAP BTP Developers Guide](https://discovery-center.cloud.sap/missiondetail/4327/4608/)
+- [SAP BTP Developer's Guide for CAP](https://github.com/SAP-samples/btp-developer-guide-cap/tree/main/documentation)
+- [Develop a Full Stack CAP Application following the SAP BTP Developer's Guide](https://discovery-center.cloud.sap/missiondetail/4327/4608/)
 - [Develop an Enterprise-Grade CAP Application following the SAP BTP Developer's Guide](https://discovery-center.cloud.sap/missiondetail/4431/4717/)
 - [Developing and Extending SAP Fiori Elements Apps](https://learning.sap.com/courses/developing-and-extending-sap-fiori-elements-apps)
 - [Getting Started with In-App Extensibility in SAP S/4HANA](https://learning.sap.com/learning-journey/get-started-with-in-app-extensibility-in-sap-s-4hana)
