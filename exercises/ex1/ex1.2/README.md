@@ -115,7 +115,7 @@ class ProcessorService extends cds.ApplicationService {
 
 - Action:
   - Log out and log in as david.admin@company.com (admin role).
-  - Try to open the incident management application.
+  - Try to open the incident management application (which will fail).
 - Result:
   - ❌ UI displays a blank loading screen (no error message).
   - ❌ Root Cause: @requires: 'support' in services.cds blocks admin access to the service.
