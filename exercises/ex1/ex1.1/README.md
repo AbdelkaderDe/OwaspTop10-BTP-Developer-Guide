@@ -79,13 +79,15 @@ annotate AdminService with @(requires: 'admin');
 
 ## 💥 3. Exploitation
 
-### Step 1: Login as Alice (Support User) 
+### 🪜 Step 1: Login as Alice (Support User) 
+
 - Access SAP Build Work Zone.
 - Login with alice.support@company.com.
 - Navigate to the Incident Management application.
 
-### Step 2: Exploit Modifying an Incident
-- Action:
+### 🪜 Step 2: Exploit Modifying an Incident
+
+- ▶️ Action:
   - View the incidents list - Alice can see all incidents.
   - Click on any non-closed incident (e.g., "No current on a sunny day").
   - Click "Edit" button - **This works because there are no ownership restrictions**.
@@ -94,35 +96,42 @@ annotate AdminService with @(requires: 'admin');
       - Change status to "In Process".
       - Add a conversation entry: "Alice was here".
   - Click "Save".
-- Result:
+   
+- ✅ Result:
   - ❌ The system allows Alice to modify and save ANY non-closed incident.
   - ❌ Root Cause: No 'assignedTo' field,  means no ownership tracking is possible.
  
-### Step 3: Attempt Updating a Closed Incident
-- Action:
+### 🪜 Step 3: Attempt Updating a Closed Incident
+
+- ▶️ Action:
   - Navigate to a closed incident (e.g., one with status "Closed").
   - Click "Edit".
   - Try to modify the incident details (e.g., change the title or add a conversation entry).
   - Click "Save".
-- Result:
+    
+- ✅ Result:
   - ✅ The system prevents the update and displays an error (e.g., "Cannot modify a closed incident").
   - 👉 This is due to the existing check in services.js, which blocks updates on closed incidents regardless of the user role.
   - ❌ However, this does not mitigate the core Horizontal Privilege Escalation issue, as Alice can still update non-closed incidents not assigned to her.
 
-### Step 4: Exploit Deleting an Incident
-- Action:
+### 🪜 Step 4: Exploit Deleting an Incident
+
+- ▶️ Action:
   - Navigate to any incident.
   - Click "Delete" (or select the incident and click the Delete button).
   - Confirm deletion when prompted (e.g., "Are you sure you want to delete this incident?").
-- Result:
+    
+- ✅ Result:
   - ❌ The system allows Alice to delete ANY incident.
   - ❌ Root Cause: No 'assignedTo' field, means no ownership tracking is possible.
     
-### Step 5: Test with Another User
-- Action:
+### 🪜 Step 5: Test with Another User
+
+- ▶️ Action:
   - Log out as Alice and log in as bob.support@company.com (another support user).
   - Repeat the update and delete actions on any incidents.
-- Result: ❌ The system allows Bob to perform the same unauthorized updates and deletions, confirming that all support users have unrestricted access to all open incidents.
+  - 
+- ✅ Result: ❌ The system allows Bob to perform the same unauthorized updates and deletions, confirming that all support users have unrestricted access to all open incidents.
 
 ### 📌 Critical Vulnerability Summary
 
@@ -133,7 +142,10 @@ annotate AdminService with @(requires: 'admin');
 ## 🛡️ 4. Remediation
 The fix requires both database schema changes and service-level security implementation.
 
-### Step 1: Add Assignment Tracking to Database Schema
+### 🪜 Step 1: Add Assignment Tracking to Database Schema
+
+- Copy the contents of [schema.cds](./db/schema.cds) into your project’s db/schema.cds file.
+- Ensure the following corrected code is included in the file:
 
 **File**: `db/schema.cds`
 ```cds
@@ -162,9 +174,11 @@ entity Incidents : cuid, managed {
 }
 ... // Other entity
 ```
-Copy the contents of [schema.cds](./db/schema.cds) into your project’s db/schema.cds file.
 
-### Step 2: Update Test Data with Assignments
+### 🪜 Step 2: Update Test Data with Assignments
+
+- Copy the contents of [sap.capire.incidents-Incidents.csv](./db/data/sap.capire.incidents-Incidents.csv) into your project’s db/data/sap.capire.incidents-Incidents.csv file.
+- Ensure the following data is included in the file:
 
 File: `db/data/sap.capire.incidents-Incidents.csv`
  *   Add the 'assignedTo' column and assign incidents to our test users.
@@ -179,9 +193,11 @@ ID,customer_ID,title,urgency_code,status_code,assignedTo
 3583f982-d7df-4aad-ab45-301d4a157cc7,1004100,Door lock broken,H,N,
 
 ```
-Copy the contents of [sap.capire.incidents-Incidents.csv](./db/data/sap.capire.incidents-Incidents.csv) into your project’s db/data/sap.capire.incidents-Incidents.csv file.
 
-### Step 3: Implement Service-Level Security
+### 🪜 Step 3: Implement Service-Level Security
+
+- Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
+- Ensure the following corrected code is included in the file:
 
 File: `srv/services.cds`
 
@@ -219,7 +235,6 @@ using { sap.capire.incidents as my } from '../db/schema';
 
 ... // Other methods
 ```
-Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
 
 >**Note:**  
 > In SAP CAP, the `@restrict` annotations in `services.cds` are processed **before** the `services.js` logic and generate system-level errors (e.g., `403 Forbidden`) directly at the database query layer.  
@@ -231,6 +246,8 @@ Copy the contents of [services.cds](./srv/services.cds) into your project’s sr
 > - `@restrict` in `services.cds` → **static authorization checks**. Enforced by CDS *before* any custom code runs.  
 > - `before`/`after` handlers in `services.js` → **dynamic business rules** that cannot be expressed using static `where` conditions.
 
+- Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
+- Ensure the following corrected code is included in the file:
 
 File: `srv/services.js`
 
@@ -282,9 +299,8 @@ class ProcessorService extends cds.ApplicationService {
 
 module.exports = { ProcessorService }
 ```
-Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
 
-### Step 4: Update UI to Show Assignment
+### 🪜 Step 4: Update UI to Show Assignment
 To make the new assignedTo field visible and usable in your Fiori Elements application, you need to
 add the following parts in the code:
 
@@ -295,6 +311,9 @@ add the following parts in the code:
 
 **i18n.properties file:**
   - Add new property: AssignedTo=Assigned To
+
+- Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into your project’s app/incidents/annotations.cds file.
+- Ensure the following corrected code is included in the file:
 
 **File**: app/incidents/annotations.cds changes:
 
@@ -347,10 +366,11 @@ UI.FieldGroup #GeneratedGroup : {
 
 ... // Other methods
 ```
-Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into your project’s app/incidents/annotations.cds file.
 
 **File**: /i18n/i18n.properties
 
+- Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s /_i18n/i18n.properties file.
+- Ensure the following corrected code is included in the file:
 ```
 ... Other entries
 
@@ -358,7 +378,6 @@ Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into you
 AssignedTo=Assigned To
 
 ```
-Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s /_i18n/i18n.properties file.
 
 ## ✅ 5. Verification
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
