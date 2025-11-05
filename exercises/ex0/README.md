@@ -20,7 +20,8 @@
 - [Summary](#summary)
   
 ## Overview 
-In these hands-on exercises, we will be using the <a href="https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/" target="_blank" rel="noopener noreferrer">Incident Management Application</a>, which is designed as a reference application for the <a href="https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide" target="_blank" rel="noopener noreferrer">SAP BTP Developer's Guide</a>. It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
+
+In these hands-on exercises, we will be using the [Incident Management Application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
 
 - ⚠️ **Note:** To keep this page open, right-click each link and choose **"Open link in new tab"**.
 
