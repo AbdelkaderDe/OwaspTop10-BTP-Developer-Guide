@@ -85,7 +85,9 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-### Review the Configured User Access
+### Review the Configured User Access:
+
+- ⚠️ **Note:** In this workshop, your account **xp260-0xx@education.cloud.sap** fulfills two key roles: as a **platform administrator** for configuring role collections and infrastructure, and as a **business application user** for developing and testing secure Incident Management features. This duality simplifies the training environment by eliminating constant re-logins during exercises, but in real-world systems, strict role separation ensuring users hold only necessary permissions—is essential.
 
 1- Check the users under **Security > Users**.
 
@@ -107,7 +109,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-4- You will make use of some test users to test the application you are working on:
+4- To demonstrate real-world access control, you'll test the application using dedicated accounts with **precisely scoped** role collections. Unlike your **xp260-0xx@education.cloud.sap** training account's broad privileges, these users showcase how proper role assignments enforce **least privilege** in production:
   - **bob.support@company.com** (Support user)
   - **alice.support@company.com** (Support user)
   - **david.admin@company.com** (Admin user)
