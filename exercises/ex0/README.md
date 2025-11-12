@@ -75,7 +75,7 @@ The solution diagram illustrates the key components and their interactions withi
 
 | Environment Name    | Plan       |
 | :------------------ | :-------   |
-| Cloud Foundry Runtime | standard |
+| [Cloud Foundry Runtime](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/cloud-foundry-runtime?region=all) | standard |
 
 - Check the subscriptions, instances, and the environment under subaccount **XP260_0xx > Instances and Subscriptions** in the **SAP BTP cockpit**.
  
