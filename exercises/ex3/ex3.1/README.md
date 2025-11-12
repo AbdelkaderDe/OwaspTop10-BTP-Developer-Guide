@@ -177,11 +177,11 @@ Results :
 
 ### 🪜 Step 2: List All Customers
 - ▶️ Action: 
-  - Click on the link to localhost:4004 in the terminal window to connect to your locally running CAP server.
-  - Click on Customers under the Service Endpoints: /odata/v4/processor/$metadata section.
-  - Use the following credentials if required : Username = 'alice',  Password: [leave empty — no password required]
+  - Click on the link to **localhost:4004** in the terminal window to connect to your locally running CAP server.
+  - Click on Customers under the Service Endpoints: **/odata/v4/processor/$metadata** section.
+  - Use the following credentials if required : **Username = 'alice'**,  **Password: [leave empty — no password required]**
 - Result:
-  - Note: You might want to enable the checkbox "Pretty-print" for better readability.
+  - Note: You might want to enable the checkbox **"Pretty-print"** for better readability.
 ```
 {
   "@odata.context": "$metadata#Customers",
