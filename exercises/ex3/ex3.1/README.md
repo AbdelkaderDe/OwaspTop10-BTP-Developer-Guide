@@ -148,7 +148,7 @@ In this workshop, a **Security Logging and Monitoring Failures** vulnerability i
  cds watch 
 
 ```
-Results :
+- ✅ Results :
 
 ```
 [cds] - connect using bindings from: { registry: '~/.cds-services.json' }
