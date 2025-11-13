@@ -2,11 +2,11 @@
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2025-XP260)](https://api.reuse.software/info/github.com/SAP-samples/teched2025-XP260)
 
-## Description
+## 📝Description
 
 This repository contains the material for the SAP TechEd 2025 session called "XP260 - Mastering Secure Application Development in SAP BTP: A Practical Workshop".  
 
-## Overview
+## 🔎 Overview
 
 Welcome to this hands-on workshop dedicated to embedding security into your SAP BTP applications. 
 In an era where data breaches and cyber threats are constant, building secure software is not an option - it's a requirement. This workshop is designed for developers working with the SAP Cloud Application Programming Model (CAP) and Node.js. 
