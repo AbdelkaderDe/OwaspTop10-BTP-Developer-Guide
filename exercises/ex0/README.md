@@ -1,5 +1,6 @@
-# SAP BTP Trial Setup & Deployment
+# BTP Trial Account: Environment Setup and Initial Deployment
 
+    
 ## Table of Contents
 
 - [Overview](#overview)
