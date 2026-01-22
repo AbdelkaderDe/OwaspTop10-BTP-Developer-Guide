@@ -1,5 +1,13 @@
 # Environment Setup and Initial Deployment
 
+🚀 Quick Start
+
+* **Duration:** 2 hours hands-on workshop
+* **What you'll build:** A simple SAP BTP application with security features
+* **Prerequisites:** Web browser, SAP BTP Trial Account
+* **Setup time:** ~30 minutes
+* **Start here:** Step 1: Set Up Your Trial Account
+
     
 ## Table of Contents
 
