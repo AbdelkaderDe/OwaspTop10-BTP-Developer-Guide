@@ -101,12 +101,19 @@ In this step, you will ensure the necessary applications are subscribed to.
 
 ### 1. Navigate to the Service Marketplace
   1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
-  2. Click on Service Marketplace.
+  2. Click on **Service Marketplace**.
 
 ### 2. Subscribe to Services
 Search for and create a subscription for the 3 additional services listed below.
+
+| Application                           | Plan             | Purpose             |
+| :------------------------------       | :--------------- | :---------------    |
+| [SAP HANA Cloud](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/sap-hana-cloud/?region=all)              | tools             |Provides the database administration tools.|
+| [Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | default |Manages user authentication|
+| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |The Launchpad where you will access your deployed app.|
+
 For each service:
-* Click on the **... (More) menu**, then select Create. 
+* Click on the **... (More) menu**, then select Create.
 * In the Create wizard:
   - **Service:** ensure the correct service is selected.
   - **Plan:** select the plan from the table (e.g., standard, default, or tools).
@@ -116,17 +123,6 @@ For each service:
 
 * Repeat this process for the remaining services.
 
-| Application                           | Plan             | Purpose             |
-| :------------------------------       | :--------------- | :---------------    |
-| [SAP HANA Cloud](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/sap-hana-cloud/?region=all)              | tools             |Provides the database administration tools.|
-| [Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | default |Manages user authentication|
-| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |The Launchpad where you will access your deployed app.|
-
-
-
-  From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
-Click on Service Marketplace.
-  
 #### Subscriptions
 
 | Application                           | Plan             |
