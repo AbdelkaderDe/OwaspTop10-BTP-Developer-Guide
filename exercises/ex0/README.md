@@ -156,8 +156,15 @@ Establishing trust allows SAP Cloud Identity Services to act as your central ide
   2. **Initiate Trust Setup:** Click the **Establish Trust** button.
   3. **Choose Tenant:** In the wizard, select your pre-linked SAP Cloud Identity tenant and click **Next**.
   4. **Complete and Review:** Follow the remaining steps for **"Configure Main Information"** and **"Configure Identiy provider and Parameters"**, keep the default values in all steps and click on next, then click **Finish** to activate the trust.
+
+  <p align="center">
+    <img src="images/IAS-trust configuration.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
      
-5. Once subscribed, click View Subscription,
+6. Once subscribed, click View Subscription,
   1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
   2. Click on **Service Marketplace**.
   3. Search for **"SAP HANA Cloud"** and select it from the results.
