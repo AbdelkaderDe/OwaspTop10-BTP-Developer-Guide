@@ -22,6 +22,24 @@
   - [Solution Diagram](#solution-diagram)
 - [Step 1: Set Up Your BTP Trial Account](#step-1-set-up-your-trial-account)
 - [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions)
+   - 2.1. [Subscribe to SAP HANA Cloud (Trial)](#21-subscribe-to-sap-hana-cloud-trial)
+   - 2.2. [Subscribe to Cloud Identity Services (Trial)](#22-subscribe-to-cloud-identity-services-trial)
+   - 2.3. [Establish OpenID Connect Trust (Trial)](#23-establish-openid-connect-trust-trial)
+   - 2.4. [Subscribe to SAP Build Work Zone, Standard Edition (Trial)](#24-subscribe-to-sap-build-work-zone-standard-edition-trial)
+- [Step 3: Provision SAP HANA Cloud Service](#step-3-provision-sap-hana-cloud-service)
+- [Step 4: Configure Custom SAP Cloud Identity](#step-4-configure-custom-sap-cloud-identity)
+- [Step 5: Configure User Access (Role Collections & Platform Roles)](#step-5-configure-user-access-role-collections--platform-roles)
+- [Step 6: Launch BAS, Import Project, and Deploy to Cloud Foundry](#step-6-launch-bas-import-project-and-deploy-to-cloud-foundry)
+- [Step 7: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
+
+
+
+- [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions)
+- 
+      2.1. Subscribe to SAP HANA Cloud (Trial)
+      2.2. Subscribe to Cloud Identity Services (Trial)
+      2.3. Establish OpenID Connect Trust (Trial)
+      2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)
 - Step 3: Provision SAP HANA Cloud Service
 - Step 4: Configure Custom SAP Cloud Identity
 - Step 5: Configure User Access (Role Collections & Platform Roles)
@@ -94,33 +112,38 @@ The solution diagram illustrates the key components and their interactions withi
 
 In this step, you will ensure the necessary applications are subscribed to.
 
-  ⚠️ **Note:** 
-  - Your Trial account comes pre-configured with [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all) (subscribed) and the
-    [Cloud Foundry Environment](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/cloud-foundry-runtime?region=all) (enabled). You do not need to add these manually.
-  - We use the Identity Authentication service tenant as custom identity provider, both for platform and application users.
-
-### 1. Navigate to the Service Marketplace
-  1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
-  2. Click on **Service Marketplace**.
-
-### 2. Subscribe to Services
-Search for and create a subscription for the 3 additional services listed below.
-
-| Application                           | Plan             | Purpose             |
+| Application                           | Subscription Plan             | Purpose             |
 | :------------------------------       | :--------------- | :---------------    |
 | [SAP HANA Cloud](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/sap-hana-cloud/?region=all)              | tools             |Provides the database administration tools.|
 | [Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | default |Manages user authentication|
 | [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |The Launchpad where you will access your deployed app.|
 
-For each service:
-* Click on the **... (More) menu**, then select Create.
-* In the Create wizard:
-  - **Service:** ensure the correct service is selected.
-  - **Plan:** select the plan from the table (e.g., standard, default, or tools).
-  - Click **Create**.
-  - Click **View Susbcription**.
 
-* Repeat this process for the remaining services.
+  ⚠️ **Note:** 
+  - Your Trial account comes pre-configured with [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all) (subscribed) and the
+    [Cloud Foundry Environment](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/cloud-foundry-runtime?region=all) (enabled). You do not need to add these manually.
+  - Before subscribing to SAP Build Work Zone, standard edition, you must establish trust between your BTP subaccount and an SAP Cloud Identity Services – Identity Authentication (IAS) tenant using OpenID Connect (OIDC).
+Search for and create a subscription for the 3 additional services listed below.
+
+### 2.1. Subscribe to SAP HANA Cloud (Trial)
+  1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
+  2. Click on **Service Marketplace**.
+  3. Search for **"SAP HANA Cloud"** and select it from the results.
+  4. Click the three-dot menu **(...)** next to the service name, then choose Create.
+  5. In the Create Subscription wizard:
+      * Confirm Service is set to "SAP HANA Cloud"
+      * Select **Subscription Plan: tools** (free Trial plan)
+      * Click **Create**.
+  6. After subscription completes, click View Subscription, then click **Create Instance** to provision your Trial HANA Cloud database:
+      * Follow the wizard to configure your instance (use default settings for Trial)
+      * Note: Trial HANA Cloud instances expire after 30 days and can be restarted via the cockpit.
+
+
+
+Verify the instance is active in the Instances tab.
+
+
+
 
 #### Subscriptions
 
