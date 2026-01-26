@@ -33,11 +33,10 @@
      - [3.4. Configure role collections]()
      - [3.5. Configure Cloud Foundry Admin Access (Platform User)]()
 
-- [Step 3: Provision SAP HANA Cloud Service](#step-3-provision-sap-hana-cloud-service)
-- [Step 4: Configure Custom SAP Cloud Identity](#step-4-configure-custom-sap-cloud-identity)
-- [Step 5: Configure User Access (Role Collections & Platform Roles)](#step-5-configure-user-access-role-collections--platform-roles)
-- [Step 6: Launch BAS, Import Project, and Deploy to Cloud Foundry](#step-6-launch-bas-import-project-and-deploy-to-cloud-foundry)
-- [Step 7: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
+- [Step 4: Create SAP HANA Cloud Instance](#step-3-provision-sap-hana-cloud-service)
+- [Step 5: Launch BAS, Import Project, and Deploy to Cloud Foundry](#step-6-launch-bas-import-project-and-deploy-to-cloud-foundry)
+- [Step 6: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
+- [Step 7: Login to the application]()
 
 ## Set up Process flow Diagram
   <p align="center">
