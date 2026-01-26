@@ -150,7 +150,7 @@ Establishing trust allows SAP Cloud Identity Services to act as your central ide
       * Select **Subscription Plan: standard**
   5. After subscription complete, Confirm **Status = "Subscribed"**
 
-At the conclusion of Step 2: Set Up Subscriptions, your Subscriptions tab will display the complete list of successfully subscribed required services, exactly as illustrated in the following 
+At the conclusion of [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions), your Subscriptions tab will display the complete list of successfully subscribed required services, exactly as illustrated in the following 
 image:
 
   <p align="center">
