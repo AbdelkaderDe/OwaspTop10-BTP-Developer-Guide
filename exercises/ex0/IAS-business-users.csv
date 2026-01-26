@@ -1,0 +1,4 @@
+﻿active,userName,name.givenName,name.familyName,emails[0].value,emails[0].primary,urn:ietf:params:scim:schemas:extension:sap:2.0:User:mailVerified,urn:ietf:params:scim:schemas:extension:sap:2.0:User:emails[0].verified
+true,alice.jones@acme.com,alice,johns,alice.jones@acme.com,true,true,true
+true,bob.smith@acme.com,bob,smith,bob.smith@acme.com,true,true,true
+true,david.miller@acme.com,david,miller,david.miller@acme.com,true,true,true
