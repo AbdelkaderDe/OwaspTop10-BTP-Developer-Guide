@@ -215,7 +215,7 @@ To ensure you have full administrative rights to manage the development tools, a
 
 ### 3.5. Configure Cloud Foundry Admin Access (Platform User)
 For identity-provider user admin , who act as Platform Users, follow these steps to manage the Org and Space levels.
-### 3.5.1 Add Admin as Org Member
+#### 3.5.1 Add Admin as Org Member
 The Org (Organization) is the top level of the **Cloud Foundry environment**.
   1. In the SAP BTP Cockpit, navigate to your Subaccount.
   2. On the left-side menu, click on **Cloud Foundry > Org Members.**
@@ -225,7 +225,7 @@ The Org (Organization) is the top level of the **Cloud Foundry environment**.
   6. Assign the following Org Roles:
       - **Org Manager** (Allows management of spaces, users, and domains).
       - **Org User** (Grants basic access to the Org).
-### 3.5.2 Add Admin as Space Member
+#### 3.5.2 Add Admin as Space Member
 The Space is where applications and services are actually deployed.
   1. On the left-side menu, navigate to **Cloud Foundry > Spaces**.
   2. Click on the name of the space you want to manage (e.g., dev).
