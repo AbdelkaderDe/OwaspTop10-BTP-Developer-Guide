@@ -183,8 +183,22 @@ This section details how to manage users and their access rights within your SAP
   1. In the **User Management** screen, search for and click on a user (e.g., alice.jones@acme.com).
   2. Navigate to the **Authentication** tab.
   3. Click on Password Details.
-  4. Set **Initial Password:** Click this to manually type a temporary password (e.g., S@p-Btp-2025!) that you will give to the user.
+  4. Click on "Set Initial" to manually type a temporary password (e.g.,dsagH@0326) that you will give to the user.
   5. Repeat this for all imported users (bob.smith@acme.com,david.miller@acme.com).
+
+### 3.3. Map IAS Users to the BTP Subaccount
+To authorize the users you just created in IAS, you must register them within your specific BTP Subaccount.
+  1. Open the SAP BTP Cockpit and navigate to your Subaccount.
+  2. In the left navigation pane, expand Security and select Users.
+  3. Click the Create button to open the user mapping dialog.
+  4. Identity Provider: Select your IAS tenant from the dropdown (e.g., xxxxxx.accounts.ondemand.com).
+  5. User Name: Enter the user’s email address (e.g., alice.jones@acme.com). This must match the email used in the IAS import.
+  6. Click Create to finalize.
+
+
+
+
+     
 
 
        
