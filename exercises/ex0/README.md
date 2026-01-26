@@ -32,20 +32,6 @@
 - [Step 6: Launch BAS, Import Project, and Deploy to Cloud Foundry](#step-6-launch-bas-import-project-and-deploy-to-cloud-foundry)
 - [Step 7: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
 
-
-
-- [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions)
-- 
-      2.1. Subscribe to SAP HANA Cloud (Trial)
-      2.2. Subscribe to Cloud Identity Services (Trial)
-      2.3. Establish Trust with SAP Cloud Identity (Trial)
-      2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)
-- Step 3: Provision SAP HANA Cloud Service
-- Step 4: Configure Custom SAP Cloud Identity
-- Step 5: Configure User Access (Role Collections & Platform Roles)
-- Step 6: Launch BAS, Import Project, and Deploy to Cloud Foundry
-- Step 7: Set Up SAP Build Work Zone
-
 ## Set up Process flow Diagram
   <p align="center">
     <img src="images/solution-diagram-incident-management.png" alt="" width="900"/>
@@ -53,20 +39,6 @@
     <b></b>
   </p>
 
-- [Access Your SAP BTP Subaccount](#access-your-sap-btp-subaccount)
-  - [Review the Subscribed Services and Instances](#review-the-subscribed-services-and-instances)
-    - [Subscriptions](#subscriptions)
-    - [Instances](#instances)
-    - [Environments](#environments)
-  - [Review the Configured User Access](#review-the-configured-user-access)
-- [Review the Development Environment](#review-the-development-environment)
-- [Launch SAP Business Application Studio](#launch-sap-business-application-studio)
-- [Login to Your Cloud Foundry Environment from SAP Business Application Studio](#login-to-your-cloud-foundry-environment-from-sap-business-application-studio)
-  - [Login Using the User Interface (UI)](#1-login-using-the-user-interface-ui)
-  - [Login Using the Command Line (Terminal)](#2-login-using-the-command-line-terminal)
-- [Launch SAP Build Work Zone](#launch-sap-build-work-zone)
-- [Summary](#summary)
-  
 ## Overview 
 
 In these hands-on exercises, we will be using the Incident Management Application, which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
@@ -150,7 +122,7 @@ Trial accounts have a pre-linked Identity Authentication (IAS) tenant, so subscr
       * Click the activation link in the email, follow the prompts to set a secure password, and log into the Identity Authentication Administration Console to confirm access. This step is optional for Trial trust setup but required for advanced user management later, including adding business users to access your SAP Build Work Zone and deployed applications.
 
   <p align="center">
-    <img src="images/cloud-identity_service_dashboard" alt="" width="900"/>
+    <img src="images/cloud-identity_service_dashboard.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
