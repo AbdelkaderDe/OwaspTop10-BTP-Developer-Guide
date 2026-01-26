@@ -117,9 +117,8 @@ For each service:
 * In the Create wizard:
   - **Service:** ensure the correct service is selected.
   - **Plan:** select the plan from the table (e.g., standard, default, or tools).
-  - **Runtime Environment:** Cloud Foundry.
-  - **Space:** leave blank.
   - Click **Create**.
+  - Click **View Suscription**.
 
 * Repeat this process for the remaining services.
 
