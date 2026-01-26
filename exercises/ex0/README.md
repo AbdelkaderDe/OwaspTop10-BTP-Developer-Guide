@@ -38,7 +38,7 @@
 - 
       2.1. Subscribe to SAP HANA Cloud (Trial)
       2.2. Subscribe to Cloud Identity Services (Trial)
-      2.3. Establish OpenID Connect Trust (Trial)
+      2.3. Establish Trust with SAP Cloud Identity (Trial)
       2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)
 - Step 3: Provision SAP HANA Cloud Service
 - Step 4: Configure Custom SAP Cloud Identity
@@ -147,9 +147,16 @@ Trial accounts have a pre-linked Identity Authentication (IAS) tenant, so subscr
   5. After subscription complete, Confirm **Status = "Subscribed"**
   6. Activate your IAS Administration Console access via email:
       * Check your registered email inbox (including spam/junk folders) for an activation message from SAP Cloud Identity Services.
-      * 1. Click the activation link in the email, follow the prompts to set a secure password, and log into the Identity Authentication Administration Console to confirm access. This step is optional for Trial trust setup but required for advanced user management later, including adding business users to access your SAP Build Work Zone and deployed applications.
-        
+      * Click the activation link in the email, follow the prompts to set a secure password, and log into the Identity Authentication Administration Console to confirm access. This step is optional for Trial trust setup but required for advanced user management later, including adding business users to access your SAP Build Work Zone and deployed applications.
 
+### 2.3. Establish Trust with SAP Cloud Identity (Trial)
+Establishing trust allows SAP Cloud Identity Services to act as your central identity provider, enabling secure Single Sign-On (SSO) and centralized management of business users. This connection is a technical requirement for services like SAP Build Work Zone to authenticate users and correctly assign the role collections needed to access applications.
+
+  1. **Navigate to Trust Configuration:** In your BTP subaccount, go to **Security > Trust Configuration**.
+  2. **Initiate Trust Setup:** Click the **Establish Trust** button.
+  3. **Choose Tenant:** In the wizard, select your pre-linked SAP Cloud Identity tenant and click **Next**.
+  4. **Complete and Review:** Follow the remaining steps for **"Configure Main Information"** and **"Configure Identiy provider and Parameters"**, keep the default values in all steps and click on next, then click **Finish** to activate the trust.
+     
 5. Once subscribed, click View Subscription,
   1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
   2. Click on **Service Marketplace**.
