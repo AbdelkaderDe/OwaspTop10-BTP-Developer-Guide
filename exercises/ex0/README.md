@@ -126,6 +126,8 @@ Trial accounts have a pre-linked Identity Authentication (IAS) tenant, so subscr
     <br>
     <b></b>
   </p>
+  
+  7. Bookmark SAP Cloud Identity URL (e.g., https://<your-tenant>.accounts.ondemand.com/admin) — you will need it later to add business users.
 
 ### 2.3. Establish Trust with SAP Cloud Identity (Trial)
 Establishing trust allows SAP Cloud Identity Services to act as your central identity provider, enabling secure Single Sign-On (SSO) and centralized management of business users. This connection is a technical requirement for services like SAP Build Work Zone to authenticate users and correctly assign the role collections needed to access applications.
