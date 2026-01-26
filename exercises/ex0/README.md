@@ -149,6 +149,12 @@ Trial accounts have a pre-linked Identity Authentication (IAS) tenant, so subscr
       * Check your registered email inbox (including spam/junk folders) for an activation message from SAP Cloud Identity Services.
       * Click the activation link in the email, follow the prompts to set a secure password, and log into the Identity Authentication Administration Console to confirm access. This step is optional for Trial trust setup but required for advanced user management later, including adding business users to access your SAP Build Work Zone and deployed applications.
 
+  <p align="center">
+    <img src="images/cloud-identity_service_dashboard" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
 ### 2.3. Establish Trust with SAP Cloud Identity (Trial)
 Establishing trust allows SAP Cloud Identity Services to act as your central identity provider, enabling secure Single Sign-On (SSO) and centralized management of business users. This connection is a technical requirement for services like SAP Build Work Zone to authenticate users and correctly assign the role collections needed to access applications.
 
