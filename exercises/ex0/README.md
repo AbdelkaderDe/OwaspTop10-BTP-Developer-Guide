@@ -179,7 +179,7 @@ This section details how to manage users and their access rights within your SAP
   7. Click Import.
   8. Click Confirm to finalize the import.
 
-### 3.2. Set initial password for business users
+### 3.2. Set initial Password for Business users
   1. In the **User Management** screen, search for and click on a user (e.g., alice.jones@acme.com).
   2. Navigate to the **Authentication** tab.
   3. Click on Password Details.
