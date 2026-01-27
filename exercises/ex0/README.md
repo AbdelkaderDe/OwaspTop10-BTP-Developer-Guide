@@ -220,29 +220,48 @@ Before creating the instance, you need to know where it will be mapped.
   6. Go to **Cloud Foundry > Spaces**, then click on your space (e.g., dev).
   7. Copy the Space ID from the URL:
       - Look at your browser's address bar. The URL format is:**../org/<ORG-ID>/space/<SPACE-ID>/applications**
-      - Copy the alphanumeric string after /space/ and before /applications, e.g,84304933-24e6-popo-950a-46105da935d0
+      - Copy the alphanumeric string after **/space/** and before **/applications**, e.g,84304933-24e6-popo-950a-46105da935d0
   8. Save both IDs for Step 4.3.
 
 ### 4.2 Create the SAP HANA Cloud Instance
 1. Navigate to **Services > Instances and Subscriptions**.
-2. Find **SAP HANA Cloud** under the **Subscriptions tab** and click the Go to Application icon to open SAP HANA Cloud Central.
-3. In the new tab, click Create Instance.
-4. Step 1: Choose Type: Select SAP HANA Cloud, SAP HANA database. Click Next Step.
-5. Step 2: General:
+2. Find **SAP HANA Cloud** under the **Subscriptions tab** and click the **Go to Application** icon to open **SAP HANA Cloud Central**.
+3. If you are prompted for login, choose the **custom IDP** and login with your admin user.
+4. In the new tab, click **Create Instance**.
 
-Instance Name: e.g., my-hana-db.
-Administrator Password: Set a strong password for the DBADMIN user. Note: Save this password; you will need it later for deployment.
-Click Next Step.
+5. Step 1: **Type:**
+    * Select **SAP HANA Cloud** in **Instance Type**
+    * Select **Configure manually** from the **Instance Configuration** options.
+    * Click **Next** Step.
+    7. Step 2: General:
 
+6. Step 2: **SAP HANA Database: General**
+    * **Instance Name**: e.g., hanadb.
+    * **Administrator Password:** Set a strong password for the DBADMIN user.
+    * Click **Next** Step.
 
-6. Step 3: SAP HANA Database: Leave default trial settings and click Next Step.
-7. Step 4: Advanced Settings:
+7. Step 3: **SAP HANA Database: Sizes and Availability**
+    * Leave default trial sizing and availability settings unchanged.
+    * **Next** Step.
 
-Under Allowed Connections, select Allow all IP addresses (required for trial/development access).
-Click Review and Create.
+8. Step 4: **SAP HANA Database: Connections**
+    * Under **Allowed Connections**, select **Allow all IP addresses**. This is required for trial and development access.
+    * Click **Next** Step.
+      
+9. Step 5: **SAP HANA Database: Advanced Settings**
+    * Keep default settings for **Version** and **Additional Features**.
+    * **Instance Mapping**
+        * Click **Add Mapping**.
+        * Paste your **Organization ID** and **Space ID** (copied from Step 4.1) into the **Environment Instance ID** and **Environment Group** fields.
+        * Click Next Step.
+     
+10. Step 6: **Data Lake: general**
+        * Keep default settings for **Create Data Lake**.
+        * Click **Review and Create**.
 
-
-8. Step 5: Review: Verify the details and click Create Instance.
+11. Step 7: **Review New Instances**
+        * Verify all details, especially the Instance Mapping configuration.
+        * Click **Create Instance**.
 
 
 
