@@ -256,6 +256,41 @@ To ensure you have full administrative rights to manage the development tools, a
     <b></b>
   </p>
 
+## Step 4: Create SAP HANA Cloud Instance
+In this step, you will provision the actual SAP HANA Cloud database instance and map it to your Cloud Foundry environment. This allows your applications and development tools (like SAP BAS) to interact with the database.
+
+### 4.1 Identify your Organization and Space IDs
+Before creating the instance, you need to know where it will be mapped.
+  1. In your **SAP BTP Cockpit**, go to your **Trial Subaccount > Overview**.
+  2. Click on **Cloud Foundry Environment** tab.
+  3. Locate and copy the **Org ID** (a long GUID, e.g., ceae01ac-759a-4e56-8ac8-ef4a0a8b9fa2).
+  4. Go to **Cloud Foundry > Spaces**, then click on your space (e.g., dev).
+  5. Copy the Space ID from the URL:
+      - Look at your browser's address bar. The URL format is:**../org/<ORG-ID>/space/<SPACE-ID>/applications**
+      - Copy the alphanumeric string after /space/ and before /applications, e.g,84304933-24e6-popo-950a-46105da935d0
+  6. Save both IDs for Step 4.3.
+
+### 4.2 Create the SAP HANA Cloud Instance
+1. Navigate to Services > Instances and Subscriptions.
+2. Find SAP HANA Cloud under the Subscriptions tab and click the Go to Application icon to open SAP HANA Cloud Central.
+3. In the new tab, click Create Instance.
+4. Step 1: Choose Type: Select SAP HANA Cloud, SAP HANA database. Click Next Step.
+5. Step 2: General:
+
+Instance Name: e.g., my-hana-db.
+Administrator Password: Set a strong password for the DBADMIN user. Note: Save this password; you will need it later for deployment.
+Click Next Step.
+
+
+6. Step 3: SAP HANA Database: Leave default trial settings and click Next Step.
+7. Step 4: Advanced Settings:
+
+Under Allowed Connections, select Allow all IP addresses (required for trial/development access).
+Click Review and Create.
+
+
+8. Step 5: Review: Verify the details and click Create Instance.
+
 ## Review the Development Environment
  
 1- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members**, if your platform user **xp260-0XX@education.cloud.sap** has **Org Manager, Org User** under **Org Roles**. 
