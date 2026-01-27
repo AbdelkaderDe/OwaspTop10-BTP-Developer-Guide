@@ -246,6 +246,7 @@ Before creating the instance, you need to know where it will be mapped.
     * Keep default settings for **Version** and **Additional Features**.
     * **Instance Mapping**
         * Click **Add Mapping**.
+        * **Environment Type:** Keep default as **Cloud Foundry**.
         * Paste your **Organization ID** and **Space ID** (copied from Step 4.1) into the **Environment Instance ID** and **Environment Group** fields.
         * Click Next Step.
 10. Step 6: **Data Lake: general**
@@ -254,6 +255,20 @@ Before creating the instance, you need to know where it will be mapped.
 11. Step 7: **Review New Instances**
     * Verify all details, especially the Instance Mapping configuration.
     * Click **Create Instance**.
+   
+12. Step 8: **Verify Instance Creation**
+    * Wait for the instance to be provisioned. This may take several minutes.
+    * Once complete, you will see your instance (e.g., hanadb) listed in the All Instances view with a Running status (green indicator).
+    * Confirm the Type shows SAP HANA Database and the instance is ready for use.
+   
+   <p align="center">
+    <img src="images/sap-hana-database-instance.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+   
+      
 
 
 
