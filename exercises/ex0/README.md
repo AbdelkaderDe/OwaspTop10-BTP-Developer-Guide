@@ -230,20 +230,25 @@ Before creating the instance, you need to know where it will be mapped.
 2. Find **SAP HANA Cloud** under the **Subscriptions tab** and click the **Go to Application** icon to open **SAP HANA Cloud Central**.
 3. If you are prompted for login, choose the **custom IDP** and login with your admin user.
 4. In the new tab, click **Create Instance**.
+
 5. Step 1: **Type:**
     * Select **SAP HANA Cloud** in **Instance Type**
     * Select **Configure manually** from the **Instance Configuration** options.
     * Click **Next** Step.
+
 6. Step 2: **SAP HANA Database: General**
     * **Instance Name**: e.g., hanadb.
     * **Administrator Password:** Set a strong password for the DBADMIN user.
     * Click **Next** Step.
+
 7. Step 3: **SAP HANA Database: Sizes and Availability**
     * Leave default trial sizing and availability settings unchanged.
     * **Next** Step.
+
 8. Step 4: **SAP HANA Database: Connections**
     * Under **Allowed Connections**, select **Allow all IP addresses**. This is required for trial and development access.
     * Click **Next** Step.
+
 9. Step 5: **SAP HANA Database: Advanced Settings**
     * Keep default settings for **Version** and **Additional Features**.
     * **Instance Mapping**
@@ -251,9 +256,11 @@ Before creating the instance, you need to know where it will be mapped.
         * **Environment Type:** Keep default as **Cloud Foundry**.
         * Paste your **Organization ID** and **Space ID** (copied from Step 4.1) into the **Environment Instance ID** and **Environment Group** fields.
         * Click Next Step.
+
 10. Step 6: **Data Lake: general**
         * Keep default settings for **Create Data Lake**.
         * Click **Review and Create**.
+
 11. Step 7: **Review New Instances**
     * Verify all details, especially the Instance Mapping configuration.
     * Click **Create Instance**.
@@ -268,9 +275,6 @@ Before creating the instance, you need to know where it will be mapped.
     <br>
     <b></b>
   </p>
-
-
-
 
 4- To demonstrate real-world access control, you'll test the application using dedicated accounts with **precisely scoped** role collections. Unlike your **xp260-0xx@education.cloud.sap** training account's broad privileges, these users showcase how proper role assignments enforce **least privilege** in production:
   - **bob.support@company.com** (Support user)
