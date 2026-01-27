@@ -212,12 +212,11 @@ Before creating the instance, you need to know where it will be mapped.
   3. Locate and copy the **Org ID** (a long GUID, e.g., ceae01ac-759a-4e56-8ac8-ef4a0a8b9fa2).
 
    <p align="center">
-    <img src="images/btp-subaccount-orgID.png" alt="" width="900"/>
+    <img src="images/subaccout-orgID.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
 
-  5. 
   6. Go to **Cloud Foundry > Spaces**, then click on your space (e.g., dev).
   7. Copy the Space ID from the URL:
       - Look at your browser's address bar. The URL format is:**../org/<ORG-ID>/space/<SPACE-ID>/applications**
