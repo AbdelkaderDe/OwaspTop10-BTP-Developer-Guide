@@ -37,13 +37,6 @@
 - [Step 6: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
 - [Step 7: Login to the application]()
 
-## Set up Process flow Diagram
-  <p align="center">
-    <img src="images/solution-diagram-incident-management.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
-
 ## Overview 
 
 In these hands-on exercises, we will be using the Incident Management Application, which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
