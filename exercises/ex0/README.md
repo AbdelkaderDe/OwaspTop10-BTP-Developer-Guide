@@ -34,7 +34,7 @@
 - [Step 4: Create SAP HANA Cloud Instance](#step-4-create-sap-hana-cloud-instance)
      - [4.1. Identify your Organization and Space IDs](#41-identify-your-organization-and-space-ids)
      - [4.2. Create the SAP HANA Cloud Instance](#42-create-the-sap-hana-cloud-instance)
-- [Step 5: Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-6-launch-bas-import-project-and-deploy-to-cloud-foundry)
+- [Step 5: Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-5-launch-sap-bas-import-project-and-deploy-to-cloud-foundry)
      - [5.1. Create a Dev Space](#41-identify-your-organization-and-space-ids)
      - [5.2. Import the Project](#42-create-the-sap-hana-cloud-instance)
      - [5.3. Deploy to Cloud Foundry](#42-create-the-sap-hana-cloud-instance)
