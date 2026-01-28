@@ -373,7 +373,7 @@ Wait for the command to complete. This process fetches and installs the latest c
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
 #### 5.5.1: Option 1: Deploy via UI
-1. Login to Cloud Foundry:
+Login to Cloud Foundry:
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
@@ -425,6 +425,43 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <br>
     <b></b>
   </p>
+
+#### 5.5.2: Option 2: Deploy via UI
+
+1. **Open Terminal**
+   - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
+   - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+2. **Get the Cloud Foundry API Endpoint URL**
+  * In your **SAP BTP Cockpit**, go to your **Trial Subaccount > Overview**.*
+  * Click on **Cloud Foundry Environment** tab.
+  * Locate and copy the **API Endpoint:**. This value (for example: https://api.cf.eu10-004.hana.ondemand.com) is the API endpoint URL used for Cloud Foundry CLI login.
+   
+3. **Run the following command to log in:**
+  ```
+  cf login -a https://api.cf.eu10-004.hana.ondemand.com
+  ```
+3. When prompted enter:
+    * Email: Admin user email.
+    * Password: Admin user password
+    
+4.  To verify the login, run
+  ```
+    cf target
+  ```
+5- You should see the current organization and space listed.
+  
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
 
 
 
@@ -548,35 +585,6 @@ Once you have SAP Business Application Studio open with your secure incident man
   
 ### 2. Login Using the Command Line (Terminal)
 
-1. **Open Terminal**
-   - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
-   - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-   
-2. **Run the following command to log in:**
-  ```
-  cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
-  ```
-3. When prompted enter:
-    * Email: xp260-0XX@education.cloud.sap
-    * Password: Use the password provided during the session.
-    
-4.  To verify the login, run
-  ```
-    cf target
-  ```
-5- You should see the current organization and space listed.
-  
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
 
 
 
