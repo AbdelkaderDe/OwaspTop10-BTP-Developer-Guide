@@ -356,20 +356,17 @@ Before you build and deploy the application, it's crucial to ensure all project 
 
 1. **Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
 
-2- A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
-
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-3. **Run the dependency update command:**
+2. **Run the dependency update command:** In the terminal, type the following command and press Enter:
 
-In the terminal, type the following command and press Enter:
-'''
+```
 npm update
-'''
+```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
 
