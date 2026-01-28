@@ -374,7 +374,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
 
 #### 5.5.1: Option 1: Deploy via UI
 1. Login to Cloud Foundry:
-  * Press Ctrl + Shift + P to open the **Command Palette.**
+  * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
     <br>
@@ -388,7 +388,9 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>  
 
-  * In the CloudFoundry Sign In prompt, click **Open a New Browser** to generate your SSO Passcode.
+  * In the CloudFoundry Sign In prompt, click **Open a New Browser** to generate your **SSO Passcode**.
+  * if prompted or login, select your Custom Identity Provider (IdP) and sign in with your admin user.
+
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
     <br>
