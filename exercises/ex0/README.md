@@ -341,15 +341,56 @@ By the end of this step, the Secure Incident Management application will be succ
 
 Import the Project into BAS:
 
-In the BAS Explorer, import the downloaded secure-incident-management.tar project.
-Open the Integrated Terminal:
+### 5.2 Import Project to BAS
+BAS-import-project.png
+1. In the BAS Explorer pane, click Import Project.
+2. Select the secure-incident-management.tar file from your local machine and import it.
+<p align="center">
+  <img src="images/BAS-import-project.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
 
-Right-click on the project name to open the context menu.
-Select Open in Integrated Terminal.
-Note (Firefox users): If the context menu does not display, open the terminal via the Hamburger menu → Terminal → New Terminal.
+4. Open the integrated terminal for the project:
+
+Right-click the project name in Explorer → Open in Integrated Terminal.
+(Firefox workaround: Use hamburger menu → Terminal → New Terminal).
 
 
-### Step 5.1 Create a Dev Space:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
