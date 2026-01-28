@@ -369,6 +369,42 @@ npm update
 ```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
+### 5.4: Deploy the Application to Cloud Foundry
+You can deploy the application using one of two methods: **via the UI** or **via the command line**.
+
+#### 5.4.1: Option 1: Deploy via UI
+1. Login to Cloud Foundry:
+  * Press Ctrl + Shift + P to open the **Command Palette.**
+  * Type **CF: Login to Cloud Foundry** and press Enter.
+  * In the CloudFoundry Sign In prompt, click **Open a New Browser** to generate your SSO Passcode.
+  * In the browser window:
+    Select Sign in to another account.
+  Choose Sign in with alternative identity provider.
+  Copy the temporary authentication code displayed in the pop-up window.
+
+
+5. Return to BAS, paste the SSO Passcode, and click Sign In.
+6. Select your Cloud Foundry target (Organization and Space), then click Apply.
+
+You should now be logged in to your Cloud Foundry space.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
