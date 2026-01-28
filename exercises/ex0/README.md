@@ -35,6 +35,10 @@
      - [4.1. Identify your Organization and Space IDs](#41-identify-your-organization-and-space-ids)
      - [4.2. Create the SAP HANA Cloud Instance](#42-create-the-sap-hana-cloud-instance)
 - [Step 5: Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-6-launch-bas-import-project-and-deploy-to-cloud-foundry)
+     - [5.1. Create a Dev Space](#41-identify-your-organization-and-space-ids)
+     - [5.2. Import the Project](#42-create-the-sap-hana-cloud-instance)
+     - [5.3. Deploy to Cloud Foundry](#42-create-the-sap-hana-cloud-instance)
+     - [5.4. Assign Role Collections](#42-create-the-sap-hana-cloud-instance)
 - [Step 6: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
 - [Step 7: Login to the application]()
 
@@ -269,11 +273,57 @@ Before creating the instance, you need to know where it will be mapped.
     * Once complete, you will see your instance (e.g., hanadb) listed in the All Instances view with a Running status (green indicator).
     * Confirm the Type shows SAP HANA Database and the instance is ready for use.
    
-   <p align="center">
+  <p align="center">
     <img src="images/sap-hana-database-instance.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
+
+## Step 5: Launch SAP BAS, Import Project, and Deploy to Cloud Foundry
+### Oveview
+In this step, you will use SAP Business Application Studio (BAS) to import, build, and deploy the Secure Incident Management application to your Cloud Foundry environment on SAP BTP.
+
+SAP Business Application Studio is a modern, cloud-based development environment designed for building and extending SAP applications. It provides preconfigured dev spaces that include all required tools, runtimes, and extensions for full-stack cloud application development.
+
+During this step, you will:
+
+* Create a dedicated BAS dev space for the application.
+* Import the provided project archive into BAS.
+* Build and deploy the application to Cloud Foundry using either the BAS UI or the command line.
+* Ensure the application is accessible by assigning the required user role collections.
+
+By the end of this step, the Secure Incident Management application will be successfully deployed on SAP BTP Cloud Foundry, and authorized users will be able to access and use it.
+
+### Step 5.1 Create a Dev Space:
+
+1. Open SAP Business Application Studio (BAS) from your BTP Cockpit.
+
+    * Navigate to **Services > Instances and Subscriptions**.
+    * Find **SAP Business Application Studio** under the **Subscriptions** tab and click the **Go to Application** icon.
+    * If prompted for login, select your Custom Identity Provider (IdP) and sign in with your admin user.
+2. Click **Create Dev Space**.
+3. Enter the **Dev Space name: secure_incident_management**.
+4. Select **Full Stack Cloud Application** as the application type.
+5. Click **Create Dev Space**.
+
+  <p align="center">
+    <img src="images/BAS-create-dev-space.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+6. Wait for the Dev Space **status** to change to **Running**, then click on the Dev Space name to open it.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-space-running.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+### Step 5.1 Create a Dev Space:
+
+
+
+
 
 4- To demonstrate real-world access control, you'll test the application using dedicated accounts with **precisely scoped** role collections. Unlike your **xp260-0xx@education.cloud.sap** training account's broad privileges, these users showcase how proper role assignments enforce **least privilege** in production:
   - **bob.support@company.com** (Support user)
@@ -357,11 +407,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   
 5- When it is running, click on **secure_incident_management** to open the SAP Business Application Studio with your incident management application.
 
- <p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-space-running.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
+ 
 
 6- Click on **incident-management** to open the application in your workspace.
 
