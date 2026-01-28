@@ -300,7 +300,21 @@ By the end of this step, the Secure Incident Management application will be succ
 
     * Navigate to **Services > Instances and Subscriptions**.
     * Find **SAP Business Application Studio** under the **Subscriptions** tab and click the **Go to Application** icon.
+
+  <p align="center">
+      <img src="images/btp-subaccount-open-BAS-application.png" alt="" width="900"/>
+      <br>
+      <b></b>
+  </p>
+    
     * If prompted for login, select your Custom Identity Provider (IdP) and sign in with your admin user.
+
+  <p align="center">
+      <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
+      <br>
+      <b></b>
+  </p>
+    
 2. Click **Create Dev Space**.
 3. Enter the **Dev Space name: secure_incident_management**.
 4. Select **Full Stack Cloud Application** as the application type.
