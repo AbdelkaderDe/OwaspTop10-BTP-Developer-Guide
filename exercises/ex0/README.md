@@ -338,9 +338,6 @@ By the end of this step, the Secure Incident Management application will be succ
   👉 [Download Secure Incident Management Project]( https://DSAG-TechXChange-XP260/releases/download/untagged-a3e4aca324f4ce9e0992/secure-incident-management.tar)
 2. Save the file locally on your machine. This archive will be imported into SAP Business Application Studio in the next step.
 
-
-Import the Project into BAS:
-
 ### 5.2 Import Project to BAS
 BAS-import-project.png
 1. In the BAS Explorer pane, click Import Project.
@@ -351,11 +348,7 @@ BAS-import-project.png
   <b></b>
 </p>
 
-4. Open the integrated terminal for the project:
-
-Right-click the project name in Explorer → Open in Integrated Terminal.
-(Firefox workaround: Use hamburger menu → Terminal → New Terminal).
-
+4. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
 
 
 
