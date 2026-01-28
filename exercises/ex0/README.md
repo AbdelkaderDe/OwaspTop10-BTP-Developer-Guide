@@ -431,15 +431,10 @@ Login to Cloud Foundry:
 1. **Open Terminal**
    - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
    - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
-
-2. **Get the Cloud Foundry API Endpoint URL**
-  * In your **SAP BTP Cockpit**, go to your **Trial Subaccount > Overview**.*
-  * Click on **Cloud Foundry Environment** tab.
-  * Locate and copy the **API Endpoint:**. This value (for example: https://api.cf.eu10-004.hana.ondemand.com) is the API endpoint URL used for Cloud Foundry CLI login.
    
 3. **Run the following command to log in:**
   ```
-  cf login -a https://api.cf.eu10-004.hana.ondemand.com
+  cf login
   ```
 3. When prompted enter:
     * Email: Admin user email.
