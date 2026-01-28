@@ -432,12 +432,6 @@ Login to Cloud Foundry:
    - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
    - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
 
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
 2. **Get the Cloud Foundry API Endpoint URL**
   * In your **SAP BTP Cockpit**, go to your **Trial Subaccount > Overview**.*
   * Click on **Cloud Foundry Environment** tab.
